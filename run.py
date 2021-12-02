@@ -25,7 +25,7 @@ def Stats(healthNumber):
 
 def PlayGame():
     """
-    Function called at the end of the run.py file. 
+    Function called at the end of the run.py file 
     The only function called on a global scale.
     """
     print('''\033[94m
@@ -44,7 +44,14 @@ def PlayGame():
     \033[0m\n''')
     WantToPlay = input("Would you like to join us in The Hunt? (Yes/No): \n")
     if WantToPlay.lower().strip() == "yes":
+
         Story_Text("Brillant!! Lets start", 2)
+
+        global name 
+        name = input("What is your name? \n")
+        Story_Text(f"Hello {name}... GOODLUCK!!!", 2)
+        Story_Text("HAHAHAHA", 2)
+
     elif WantToPlay == "no":
         print("That's a shame. See you around!")
     else:
