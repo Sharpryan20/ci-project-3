@@ -187,14 +187,76 @@ def Opening():
     Story_Text("Any indication that he was here is the cloak bundled up.", 2)
     Story_Text("You bend down and run the cloak through your fingers \n", 2)
 
-    PickUp = input("Do you pick it up? (yes/no")
+    PickUp = input("Do you pick it up? (yes/no) \n")
     if PickUp.lower().strip() == "yes":
         Story_Text("You place the cloak over your shoulders and leave.", 2)
     elif PickUp == "no":
         Story_Text("You stand back up and head to the door.", 2)
     else:
         print("you can't type that")
+
+    Story_Text("As you leave you notice a drawer cracked open slightly. \n", 2)
+
+    OpenDrawer = input("Do you open it? (yes/no) \n")
+    if OpenDrawer.lower().strip() == "yes":
+        Story_Text("you see a note inside and a photo. It's of you.", 2)
+        Story_Text("You unfold the note and it reads; 'I'm sorry.", 2)
+        Story_Text("They made me do it, Please forgive me!'\n", 2)
+        Story_Text("You put the note in your pocket and walk out the door.", 2)
+    elif OpenDrawer == "no":
+        Story_Text("You decide not to open it and leave the house. \n", 2)
+    else:
+        print("Invalid input. Try again.")
+    Story_Text("You notice a hanging latern the porch.", 2)
+    Story_Text("You take it off the wall and start your journey. \n", 2)
+
+    TheWalk()
+
+
+def TheWalk():
+    Story_Text("It feels like hours have passed since you started.", 2)
+    Story_Text("The path strecthed out for ages, you've had nothing", 2)
+    Story_Text("to keep you company expect the whistling winds as", 2)
+    Story_Text("they raced through the trees.", 2)
+    Story_Text("The thunder had stopped but the rain was still hard.\n", 2)
+    Story_Text("FINALLY!!! \n", 2)
+    Story_Text("The path splits into two.", 2)
+
+    PickDirection = input("Do you go straight or right? (straight/right) \n")
+    if PickDirection.lower().strip() == "straight":
+        Story_Text("You continue and suddenly hear a rustle.", 2) 
+
+        Story_Text("You turn to see a bush", 2) 
+
+        WalkScenarioOne()       
+
+    elif PickDirection == "right": 
+
+        Story_Text("You walk down the path", 2)  
+
+    else: 
+
+        print("Invalid input. Please try again.") 
     
+
+
+def WalkScenarioOne():
+    FightOne = input("What do you do? (1 Use weapon/2 Carry on walking) (Pick a number) \n")
+    if FightOne.lower().strip() == "1":
+        Story_Text("You pooke the bush and the rustling stops", 2)
+        Story_Text("but a few seconds later a badger jumps at you", 2)
+        Story_Text("and scratches you.", 1)
+        Story_Text("You lose 1 health and your insanity increases.", 2)
+        HealthStats(-1)
+        InsanityStats(1)
+        CheckStats()
+    elif FightOne == "2":
+        Story_Text("you quickly scurry past and continue your walk.", 2)
+    else:
+        print("Invalid input. Please try again.")
+
+
+
 
 PlayGame()
 
