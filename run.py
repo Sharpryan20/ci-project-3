@@ -50,12 +50,25 @@ def PlayGame():
         global name 
         name = input("What is your name? \n")
         Story_Text(f"Hello {name}... GOODLUCK!!!", 2)
-        Story_Text("HAHAHAHA", 2)
+        Story_Text("HAHAHAHA \n", 2)
+        Opening()
 
     elif WantToPlay == "no":
         print("That's a shame. See you around!")
     else:
         print("I'm sorry. I'm not too sure what you mean. Please try again")
+
+def Opening():
+    Story_Text("You wake up... dazed!", 2)
+    Story_Text("The gloomy forest sets in as you realise you are lost.", 2)
+    Story_Text("The place has a sense of familarity but", 2)
+    Story_Text("you aren't quite sure how.", 2)
+    Story_Text("You stumble to your feet and frantically search", 2)
+    Story_Text("for shelter as the moon slowly rises.", 2)
+    Story_Text("In the distance you see the roof of a small building", 2)
+    Story_Text("peering out behind the trees", 2)
+    Story_Text("The fog has already began to set and you make your", 2)
+    Story_Text("to the dainty, creepy shed", 2)
 
 PlayGame()
 
