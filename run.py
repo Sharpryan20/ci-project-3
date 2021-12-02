@@ -214,6 +214,11 @@ def Opening():
 
 
 def TheWalk():
+    """
+    This function is the second part of the Game where the
+    player has just left the house.
+    There will consist nested if/else statements as the player progresses."
+    """
     Story_Text("It feels like hours have passed since you started.", 2)
     Story_Text("The path strecthed out for ages, you've had nothing", 2)
     Story_Text("to keep you company expect the whistling winds as", 2)
@@ -232,15 +237,22 @@ def TheWalk():
 
     elif PickDirection == "right": 
 
-        Story_Text("You walk down the path", 2)  
+        Story_Text("You turn right and you start walking.", 2)
+        Story_Text("You start hearing things, like screeches.", 2)
+        Story_Text("The noises get louder and louder, becoming", 2)
+        Story_Text("near impossible to even hear your thoughts.", 2)
+        WalkScenarioTwo()  
 
     else: 
-
         print("Invalid input. Please try again.") 
     
 
-
 def WalkScenarioOne():
+    """
+    This is the first scenario for TheWalk() function
+    Will only be called if player continues straight in
+    the PickDirection if/else statement.
+    """
     FightOne = input("What do you do? (1 Use weapon/2 Carry on walking) (Pick a number) \n")
     if FightOne.lower().strip() == "1":
         Story_Text("You pooke the bush and the rustling stops", 2)
@@ -256,7 +268,37 @@ def WalkScenarioOne():
         print("Invalid input. Please try again.")
 
 
+def WalkScenarioTwo():
+    """
+    This function will only be called if the player
+     turns right from the PickDirection question.
+    """
+    FightTwo = input("What do you do? (1 Stand still/ 2 Run!) \n")
+    if FightTwo.lower().strip() == "1":
+        Story_Text("The ground starts rumbling as you stand frozen.", 2)
+        Story_Text("Then out of nowhere, a herd of deers come stampeding", 2)
+        Story_Text("towards you. You crouch down to avoid a blow.", 2)
+        Story_Text("However that wasn't wise. The deers trampled you as", 2)
+        Story_Text("you laid hopeless. You lose 3 health.", 2)
+        HealthStats(-3)
+        CheckStats()
+    elif FightTwo == "2":
+        Story_Text("You bolt in the opposite direction of the sounds,", 2)
+        Story_Text("trying your best to out run the predators.", 2)
+        Story_Text("However it wasn't a predator but a herd of deer.", 2)
+        Story_Text("They were sprinting at full spped and almost", 2)
+        Story_Text("immediately ran past you. One wasn't quite as fast", 2)
+        Story_Text("and was beginning to trail behind. You wait for it", 2)
+        Story_Text("to get closer to you and as it apporaches you grab his", 2)
+        Story_Text("antlers and hop on the back.", 2)
+        Story_Text("Now startled, the deer speeds up and within time", 2)
+        Story_Text("has caught back up to the herd.", 2)
+        Story_Text("'What was they running from?'", 2)
+        Story_Text("You hop off the deer and head back, realising you", 2)
+        Story_Text("had dropped your weapon.", 2)
+    else:
+        print("Invalid input. Please try again")
 
-
-PlayGame()
+TheWalk()
+# PlayGame()
 
