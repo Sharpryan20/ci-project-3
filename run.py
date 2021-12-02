@@ -15,13 +15,17 @@ def Story_Text(text, delay):
     print(text)
     time.sleep(delay)
 
-def Stats(healthNumber):
+def Stats(healthNumber, insanityNumber):
     """
     Increases or decreases the users health by a specified amount
     then displys the users with the new health score.
     """
 
     UserStats["health"] = UserStats["health"] + (healthNumber)
+    Story_Text("Your new health is: " + str(UserStats['health']), 2)
+
+    UserStats["insanity"] = UserStats["insanity"] + (insanityNumber)
+    Story_Text("Your insanity level is: " + str(UserStats['insanity']), 2)
 
 def PlayGame():
     """
@@ -74,8 +78,18 @@ def Opening():
 
     OpenDoor = input("Do you open the door? (yes/no): \n")
     if OpenDoor.lower().strip() == "yes":
-        Story_Text("The door slowly creeps open revealing an open room and in the middle", 0.5)
-        Story_Text("of it stands a tall dark figure, a cloak covering the entity from head to toe", 2)
+        Story_Text("The door slowly creeps open revealing an open room," 1)
+        Story_Text("and in the middle of it stands a tall dark figure,", 1)
+        Story_Text("a cloak covering the entity from head to toe.", 2)
+    elif OpenDoor == "no":
+        Story_Text("You walk around and peer through a window", 1)
+        Story_Text("for a better look when suddenly a dark figure", 1)
+        Story_Text("jumps at the window. Startled, you take a step back.", 1)
+        Story_Text("The man brings his hand to the window and gesutres you to come inside.", 1)
+        Story_Text("You make your way back around to the door and enter.", 1)
+        Story_Text("Your insanity level has increased", 2)
+    else:
+        print("Invalid input. Try again")
     
 
 PlayGame()
