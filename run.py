@@ -42,6 +42,13 @@ def PlayGame():
   |   | |   |         |   |\  \|  |  | |
   |___| |___|_________|___| \_____|  |_|
     \033[0m\n''')
+    WantToPlay = input("Would you like to join us in The Hunt? (Yes/No): \n")
+    if WantToPlay.lower().strip() == "yes":
+        Story_Text("Brillant!! Lets start", 2)
+    elif WantToPlay == "no":
+        print("That's a shame. See you around!")
+    else:
+        print("I'm sorry. I'm not too sure what you mean. Please try again")
 
 PlayGame()
 
