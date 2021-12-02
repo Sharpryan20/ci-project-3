@@ -71,7 +71,6 @@ def CheckStats():
 
     if UserStats["health"] <= 0:
         NoHealth()
-    
     if UserStats["insanity"] >= 5:
         MaxInsanity()
 
@@ -124,7 +123,7 @@ def Opening():
     Story_Text("The fog has already began to set and you make your", 2)
     Story_Text("to the dainty, creepy shed", 2)
     Story_Text("When you approach the door you see a faint orange glow ", 2)
-    Story_Text("appear in the gap of the doorway, which is slightly ajar \n", 2)
+    Story_Text("appear in the doorway, which is slightly ajar \n", 2)
 
     OpenDoor = input("Do you open the door? (yes/no): \n")
     if OpenDoor.lower().strip() == "yes":
@@ -143,7 +142,7 @@ def Opening():
     else:
         print("Invalid input. Try again")
 
-    Story_Text("The man lifts his hood off and points to a chair in the corner.", 2)
+    Story_Text("The man lifts his hood and points to a chair.", 2)
     Story_Text("You catch on and sit down in the worn chair", 2)
     Story_Text("He throws more wood on the fire and just stands there", 2)
     Story_Text("watching it roar as the flames warm up the room.", 2)
@@ -161,7 +160,41 @@ def Opening():
     else:
         print("Invalid input. Try again")
 
+    Story_Text("The man paces back and forth, almost to say something", 2)
+    Story_Text("'It doesn't matter how I know your name!'", 2)
+    Story_Text("He snapped as he twisted his head almost 180 degrees", 2)
+    Story_Text("'All that matters is The Hunt can now begin.'", 2)
+    Story_Text("he lifted his hands up just as a clap of thunder bellowed", 2)
+    Story_Text("almost as if the man had summoned the phenomenon. \n", 2)
+    Story_Text("'The Hunt?' You question, your hands shake with fear \n", 2)
+    Story_Text("'The hunt is a matter of life and death. Unfortunately", 2)
+    Story_Text("you have been assigned the role of prey.", 2)
+    Story_Text("You have 8 hours to survive the forest and make it to", 2)
+    Story_Text("THE CITADEL!!", 2)
+    Story_Text("You will have a weapon of your choosing.", 2)
+    Story_Text("The man makes his way over to a locked door.", 2)
+    Story_Text("He opens it and reveals a variety of weapons.", 2)
+    Story_Text("Axes...", 0)
+    Story_Text("Knives...", 0)
+    Story_Text("Swords...", 0)
+    Story_Text("Pool cue...", 0)
 
+    global item
+    item = input("Which weapon do you pick? (Sword, Axe, Knife, Cue, Nothing)")
+    Story_Text(f"I see you picked {item}. Good choice", 2)
+    Story_Text(f"You pick up {item}. ", 2)
+    Story_Text("You turn to ask who the predator is but the man is gone.", 2)
+    Story_Text("Any indication that he was here is the cloak bundled up.", 2)
+    Story_Text("You bend down and run the cloak through your fingers \n", 2)
+
+    PickUp = input("Do you pick it up? (yes/no")
+    if PickUp.lower().strip() == "yes":
+        Story_Text("You place the cloak over your shoulders and leave.", 2)
+    elif PickUp == "no":
+        Story_Text("You stand back up and head to the door.", 2)
+    else:
+        print("you can't type that")
+    
 
 PlayGame()
 
