@@ -54,6 +54,22 @@ def MaxInsanity():
     Story_Text("There is no going back now.", 2)
     Story_Text("You lose all control over your body and you run off...", 2)
     Story_Text("Never to be seen again", 2)
+
+def CheckStats():
+    """
+    Will be called any time the users stats are affected.
+    If health drops below 0 or insanity is higher than 5, then
+    the correct function will be called and it will be 
+    game over.
+    """
+
+    if UserStats["health"] <= 0:
+        NoHealth()
+    
+    if UserStats["insanity"] >= 5:
+        MaxInsanity()
+
+
 def PlayGame():
     """
     Function called at the end of the run.py file 
