@@ -6,6 +6,7 @@ UserStats = {
     "weapon": None
 }
 
+
 def Story_Text(text, delay):
     """
     Prints out a line of text for the story and delays
@@ -14,6 +15,7 @@ def Story_Text(text, delay):
 
     print(text)
     time.sleep(delay)
+
 
 def HealthStats(healthNumber):
     """
@@ -24,6 +26,7 @@ def HealthStats(healthNumber):
     UserStats["health"] = UserStats["health"] + (healthNumber)
     Story_Text("Your new health is: " + str(UserStats['health']), 2)
 
+
 def InsanityStats(insanityNumber):
     """
     Increases or decreases the users insanity by a specific amount 
@@ -31,6 +34,7 @@ def InsanityStats(insanityNumber):
     """
     UserStats["insanity"] = UserStats["insanity"] + (insanityNumber)
     Story_Text("Your insanity level is: " + str(UserStats['insanity']), 2)
+
 
 def NoHealth():
     """
@@ -43,6 +47,7 @@ def NoHealth():
     Story_Text("You can rest now.", 2)
     Story_Text("The Hunt is Over", 2)
 
+
 def MaxInsanity():
     """
     This function will be called within the Checkstats function.
@@ -54,6 +59,7 @@ def MaxInsanity():
     Story_Text("There is no going back now.", 2)
     Story_Text("You lose all control over your body and you run off...", 2)
     Story_Text("Never to be seen again", 2)
+
 
 def CheckStats():
     """
@@ -89,7 +95,7 @@ def PlayGame():
   |   | |   |         |   |\  \|  |  | |
   |___| |___|_________|___| \_____|  |_|
     \033[0m\n''')
-    WantToPlay = input("Would you like to join us in The Hunt? (Yes/No): \n")
+    WantToPlay = input("Are you ready to join us in The Hunt? (Yes/No): \n")
     if WantToPlay.lower().strip() == "yes":
 
         Story_Text("Brillant!! Lets start", 2)
@@ -104,6 +110,7 @@ def PlayGame():
         print("That's a shame. See you around!")
     else:
         print("I'm sorry. I'm not too sure what you mean. Please try again")
+
 
 def Opening():
     Story_Text("You wake up... dazed!", 2)
@@ -121,19 +128,40 @@ def Opening():
 
     OpenDoor = input("Do you open the door? (yes/no): \n")
     if OpenDoor.lower().strip() == "yes":
-        Story_Text("The door slowly creeps open revealing an open room," 1)
-        Story_Text("and in the middle of it stands a tall dark figure,", 1)
+        Story_Text("The door slowly creeps open revealing an open room,", 2)
+        Story_Text("and in the middle of it stands a tall dark figure,", 2)
         Story_Text("a cloak covering the entity from head to toe.", 2)
     elif OpenDoor == "no":
-        Story_Text("You walk around and peer through a window", 1)
-        Story_Text("for a better look when suddenly a dark figure", 1)
-        Story_Text("jumps at the window. Startled, you take a step back.", 1)
-        Story_Text("The man brings his hand to the window and gesutres you to come inside.", 1)
-        Story_Text("You make your way back around to the door and enter.", 1)
-        Story_Text("Your insanity level has increased", 2)
+        Story_Text("You walk around and peer through a window", 2)
+        Story_Text("for a better look when suddenly a dark figure", 2)
+        Story_Text("jumps at the window. Startled, you take a step back.", 2)
+        Story_Text("The man gesutres you to come inside.", 2)
+        Story_Text("You make your way back around to the door and enter.", 2)
+        Story_Text("Your insanity level has increased \n", 2)
+        InsanityStats(+1)
+        CheckStats()
     else:
         print("Invalid input. Try again")
-    
+
+    Story_Text("The man lifts his hood off and points to a chair in the corner.", 2)
+    Story_Text("You catch on and sit down in the worn chair", 2)
+    Story_Text("He throws more wood on the fire and just stands there", 2)
+    Story_Text("watching it roar as the flames warm up the room.", 2)
+    Story_Text("You begin to feel uneasy as he scurries closer to you.", 2)
+    Story_Text(f"So {name}, I see you are finally awake!", 2)
+    Story_Text("Do you want to know why you are here? \n", 2)
+
+    AnswerBack = input("Do you answer back? (yes/no) \n")
+    if AnswerBack.lower().strip() == "yes":
+        Story_Text("You nod and say;'Wait how do you know my name?'", 2)
+        Story_Text("'Where am I?'", 2)
+    elif AnswerBack == "no":
+        Story_Text("You questioned how he knew your name", 2)
+        Story_Text("but decided not to say anything.", 2)
+    else:
+        print("Invalid input. Try again")
+
+
 
 PlayGame()
 
