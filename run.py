@@ -1,3 +1,27 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import time
+
+UserStats = {
+    "health": 10,
+    "insanity": 0,
+    "weapon": None
+}
+
+def Story(text, delay):
+    """
+    Prints out a line of text for the story and delays
+    the next line for a certain amount of time.
+    """
+
+    print(text)
+    time.sleep(delay)
+
+def Stats(healthNumber):
+    """
+    Increases or decreases the users health by a specified amount
+    then displys the users with the new health score.
+    """
+
+    UserStats["health"] = UserStats["health"] + (healthNumber)
+
+
+UserStats()
