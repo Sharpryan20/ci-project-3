@@ -69,6 +69,14 @@ def Opening():
     Story_Text("peering out behind the trees", 2)
     Story_Text("The fog has already began to set and you make your", 2)
     Story_Text("to the dainty, creepy shed", 2)
+    Story_Text("When you approach the door you see a faint orange glow ", 2)
+    Story_Text("appear in the gap of the doorway, which is slightly ajar \n", 2)
+
+    OpenDoor = input("Do you open the door? (yes/no): \n")
+    if OpenDoor.lower().strip() == "yes":
+        Story_Text("The door slowly creeps open revealing an open room and in the middle", 0.5)
+        Story_Text("of it stands a tall dark figure, a cloak covering the entity from head to toe", 2)
+    
 
 PlayGame()
 
