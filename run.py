@@ -6,7 +6,7 @@ UserStats = {
     "weapon": None
 }
 
-def Story(text, delay):
+def Story_text(text, delay):
     """
     Prints out a line of text for the story and delays
     the next line for a certain amount of time.
@@ -24,4 +24,4 @@ def Stats(healthNumber):
     UserStats["health"] = UserStats["health"] + (healthNumber)
 
 
-UserStats()
+
