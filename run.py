@@ -15,7 +15,7 @@ def Story_Text(text, delay):
     print(text)
     time.sleep(delay)
 
-def Stats(healthNumber, insanityNumber):
+def HealthStats(healthNumber):
     """
     Increases or decreases the users health by a specified amount
     then displys the users with the new health score.
@@ -24,9 +24,36 @@ def Stats(healthNumber, insanityNumber):
     UserStats["health"] = UserStats["health"] + (healthNumber)
     Story_Text("Your new health is: " + str(UserStats['health']), 2)
 
+def InsanityStats(insanityNumber):
+    """
+    Increases or decreases the users insanity by a specific amount 
+    then displays the users with the new insanity score.
+    """
     UserStats["insanity"] = UserStats["insanity"] + (insanityNumber)
     Story_Text("Your insanity level is: " + str(UserStats['insanity']), 2)
 
+def NoHealth():
+    """
+    This function is called within the CheckStats function.
+    If the user has of 0 or below, the player will die and the game 
+    will be over.
+    """
+    Story_Text("You have been severly injured.", 2)
+    Story_Text("You are too tired to continue.", 2)
+    Story_Text("You can rest now.", 2)
+    Story_Text("The Hunt is Over", 2)
+
+def MaxInsanity():
+    """
+    This function will be called within the Checkstats function.
+    If the users inasity level reaches above 5, the player will halluncinate
+    and the game will be over.
+    """
+
+    Story_Text("You start to see things, things that aren't really there.", 2)
+    Story_Text("There is no going back now.", 2)
+    Story_Text("You lose all control over your body and you run off...", 2)
+    Story_Text("Never to be seen again", 2)
 def PlayGame():
     """
     Function called at the end of the run.py file 
