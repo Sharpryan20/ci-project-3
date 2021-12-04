@@ -229,7 +229,7 @@ def TheWalk():
 
     PickDirection = input("Do you go straight or right? (straight/right) \n")
     if PickDirection.lower().strip() == "straight":
-        S_T("You continue and suddenly hear a rustle.", 2) 
+        S_T("You continue and suddenly hear a rustle.", 2)
 
         S_T("You turn to see a bush", 2) 
 
@@ -246,6 +246,21 @@ def TheWalk():
     else: 
         print("Invalid input. Please try again.") 
     
+def TheWalkPartB():
+    """
+    The second part of the TheWalk() function which both players
+    will recieve no matter what path they go down.
+    """
+    S_T("It starts to get colder the further you walk into the forest.", 2)
+    S_T("You begin to fear that there was no end to this nightmare.", 2)
+    S_T("And in fact you were destined to die out here.", 2)
+    S_T("You try to remember anything as to how you,", 2)
+    S_T("ended up here. Why was it so familiar?", 2)
+    S_T("Who was that man?", 2)
+    S_T("How did he know your name?", 2)
+    S_T("Is this some sick joke?", 2)
+    S_T("Is this even legal? It can't be?", 2)
+
 
 def WalkScenarioOne():
     """
@@ -253,9 +268,9 @@ def WalkScenarioOne():
     Will only be called if player continues straight in
     the PickDirection if/else statement.
     """
-    FightOne = input("What do you do? (1 Use weapon/2 Carry on walking) (Pick a number) \n")
+    FightOne = input("What do you do? (1 Use weapon/2 Carry on walking) \n")
     if FightOne.lower().strip() == "1":
-        S_T("You pooke the bush and the rustling stops", 2)
+        S_T("You poke the bush and the rustling stops", 2)
         S_T("but a few seconds later a badger jumps at you", 2)
         S_T("and scratches you.", 1)
         S_T("You lose 1 health and your insanity increases.", 2)
@@ -263,9 +278,93 @@ def WalkScenarioOne():
         InsanityStats(1)
         CheckStats()
     elif FightOne == "2":
-        S_T("you quickly scurry past and continue your walk.", 2)
+        S_T("The rustling stops after a few seconds.", 2)
+        S_T("you quickly scurry past and continue your walk,", 2)
+        S_T("careful not to disturb the beast.", 2)
     else:
         print("Invalid input. Please try again.")
+    
+    TheWalkPartB()
+    TheWalk1_A()
+
+
+def TheWalk1_A():
+    """
+    This function is called
+    the player takes the straight path and after 
+    TheWalkPartB() is called.
+    """
+    S_T("The path begins to fade out as nature covers the concrete.", 2)
+    S_T("No one has been down here in a while.", 2)
+    S_T("Have you chosen the right path?", 2)
+    S_T("Is the predator down here?", 2)
+    S_T("You try to stay strong.", 2)
+    S_T("You have come to far to give up now, surely there is only,", 2)
+    S_T("a few hours left to the go.", 2)
+    S_T("Your latern begins to flicker ever so slightly.", 2)
+    S_T("The winds have almost completely stopped, making it more eerie", 2)
+    S_T("than before.", 2)
+    S_T("You step in a puddle and you foot becomes soaked.", 2)
+    S_T("But is it rain water?", 2)
+    S_T("You bend down and a faint dark red begins to show. \n", 2)
+    S_T("No! ", 2)
+    S_T("It can't be.", 2)
+    S_T("You feel a drop on your head and you look up. \n", 2)
+    S_T("You muffle your own screams as you realise its not rain but", 2)
+    S_T("Infact blood. \n", 2)
+    S_T("THE BEAST! \n", 2)
+    S_T("You take off into the woods, no longer following a path.", 2)
+    S_T("Your heart pants like crazy, your eyesight blurred,", 2)
+    S_T("as fear escapes your eyes", 2)
+    S_T("It's safe for the time being.", 2)
+    S_T("However in the distant you hear chanting...", 2)
+    S_T("you can't make out what they are saying over the banging", 2)
+    S_T("of the drums.", 2)
+    S_T("To your right you smoke rising into the sky, behind the trees.", 2)
+    S_T("Fire!!", 2)
+    S_T("You are torn for choice.", 2)
+    PickDirectionTwo = input("Where do you go? (1 Chanting/ 2 Fire) \n")
+    if PickDirectionTwo.lower().strip() == "1":
+        the_chant()
+
+def the_chant():
+    """
+    This function is called when the player
+     picks option 1 in theWalk1_A().
+    """
+    S_T("You slowly make your way to the chanting", 2)
+    S_T("trying not to alert your position to them.", 2)
+    S_T("The noise gets louder and louder as you near them.", 2)
+    S_T("Eventually the sounds seem to surround you.", 2)
+    S_T("You step on a twig and it crunches.", 2)
+    S_T("The chanting abruptly stops.", 2)
+    S_T("One by one, eyes start staring at you as you spin around. \n", 2)
+    S_T("You're trapped.", 2)
+    S_T("There's no escape. ", 2)
+    S_T("The eyes seem to be floating closer to you.", 2)
+    S_T("And with that your latern goes out, leaving the moon as", 2)
+    S_T("your only source of light.", 2)
+    S_T("The glow of the moon higlights the chanters, however", 2)
+    S_T("they are still silent. \n", 2)
+    InsanityStats(2)
+    CheckStats()
+    S_T("", 2)
+    S_T("You see a bony finger come towards you and within seconds", 2)
+    S_T("You feel many hands grasp you and lift you off the ground", 2)
+    S_T("There's no luck in escaping as you try to wriggle out.\n", 2)
+    S_T("After what feels like hours of being held hostage but was a", 2)
+    S_T("measley few minutes, they drop you down on the floor. ", 2)
+    S_T("The smell of smoke fills your nostrils as you look around", 2)
+    S_T("and notice the smoke from the fire was closer than before.", 2)
+    S_T("They form another circle around you and watch as you", 2)
+    S_T("stumble to your feet.", 2)
+    S_T("You hold onto your weapon as you decide your next move.", 2)
+
+    attack_one = input("Do you attack? (yes/no) \n")
+    if attack_one.lower().strip() == "yes":
+        fvn
+
+
 
 
 def WalkScenarioTwo():
@@ -281,7 +380,7 @@ def WalkScenarioTwo():
         S_T("However that wasn't wise. The deers trampled you as", 2)
         S_T("you laid hopeless. You lose 3 health.", 2)
         HealthStats(-3)
-        CheckStats()
+        CheckStats()  
     elif FightTwo == "2":
         S_T("You bolt in the opposite direction of the sounds,", 2)
         S_T("trying your best to out run the predators.", 2)
@@ -299,6 +398,11 @@ def WalkScenarioTwo():
     else:
         print("Invalid input. Please try again")
 
+    TheWalkPartB()
+    
 
-PlayGame()
+
+TheWalk()
+
+# PlayGame()
 
