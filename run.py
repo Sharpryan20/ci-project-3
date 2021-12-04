@@ -1,6 +1,10 @@
 import time
 
 UserStats = {
+    """
+    This function is the standard stats for all players.
+    This will alter throughout the game.
+    """
     "health": 10,
     "insanity": 0,
     "weapon": None
@@ -339,7 +343,7 @@ def the_fire():
     picks option two in the PickDirectionTwo
     if/else statement. 
     """
-    S_T("you make your way to the smoke.", 2)
+    S_T("You make your way to the smoke.", 2)
     S_T("Ash starts to consume the atmosphere.", 2)
     S_T("the flickering of the fire is the only", 2)
     S_T("comforting sound you've heard in a while.", 2)
@@ -347,6 +351,10 @@ def the_fire():
     S_T("As you approach the area you see a log being used as a bench.", 2)
     S_T("A lone figure is occupying one of the benches.", 2)
     S_T("Hesitantly, you make your way and notice something. \n", 2)
+
+    potion()
+
+def potion():
     S_T("It's the man! the man from the beginning.", 2)
     S_T("As if by magic, the man turns around. There is no way", 2)
     S_T("he heard you coming. \n", 2)
@@ -359,10 +367,10 @@ def the_fire():
     S_T("You have been through the wars though.", 2)
     S_T("I'm going to offer two potions. You may only pick one though.", 2)
     S_T("One will increase your health back up, the other will decrease", 2)
-    S_T("your insanity level. So which will it be \n?", 2)
+    S_T("your insanity level. So which will it be? \n", 2)
     HealthStats(0)
     InsanityStats(0)
-    potion_picker = input("Which potion do you want? (1 Health/ 2 Potion")
+    potion_picker = input("Which potion do you want? (1 Health/ 2 Potion) \n")
     if potion_picker.lower().strip() == "1":
         S_T("Good choice. Take this and drink it and your health will", 2)
         S_T("increase by 3 points. \n", 2)
@@ -409,7 +417,10 @@ def the_fire():
         HealthStats(-3)
         S_T("", 2)
         S_T("And just like that, the man had disappeared... again.", 2)
-        
+    else:
+        print("Invalid input. Please try again.")
+
+
 
 def the_chant():
     """
@@ -517,5 +528,7 @@ def WalkScenarioTwo():
 # TheWalk()
 
 
-PlayGame()
+# PlayGame()
+
+the_fire()
 
