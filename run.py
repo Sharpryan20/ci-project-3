@@ -24,7 +24,7 @@ def HealthStats(healthNumber):
     """
 
     UserStats["health"] = UserStats["health"] + (healthNumber)
-    S_T("Your new health is: " + str(UserStats['health']), 2)
+    S_T("Your health is: " + str(UserStats['health']), 2)
 
 
 def InsanityStats(insanityNumber):
@@ -137,7 +137,7 @@ def Opening():
         S_T("The man gesutres you to come inside.", 2)
         S_T("You make your way back around to the door and enter.", 2)
         S_T("Your insanity level has increased \n", 2)
-        InsanityStats(+1)
+        InsanityStats(+2)
         CheckStats()
     else:
         print("Invalid input. Try again")
@@ -246,6 +246,7 @@ def TheWalk():
     else: 
         print("Invalid input. Please try again.") 
     
+
 def TheWalkPartB():
     """
     The second part of the TheWalk() function which both players
@@ -273,9 +274,9 @@ def WalkScenarioOne():
         S_T("You poke the bush and the rustling stops", 2)
         S_T("but a few seconds later a badger jumps at you", 2)
         S_T("and scratches you.", 1)
-        S_T("You lose 1 health and your insanity increases.", 2)
-        HealthStats(-1)
-        InsanityStats(1)
+        S_T("You lose 2 health and your insanity increases.", 2)
+        HealthStats(-2)
+        InsanityStats(2)
         CheckStats()
     elif FightOne == "2":
         S_T("The rustling stops after a few seconds.", 2)
@@ -326,6 +327,89 @@ def TheWalk1_A():
     PickDirectionTwo = input("Where do you go? (1 Chanting/ 2 Fire) \n")
     if PickDirectionTwo.lower().strip() == "1":
         the_chant()
+    elif PickDirectionTwo == "2":
+        the_fire()
+    else:
+        print("Invalid input. Please try again.")
+
+
+def the_fire():
+    """
+    This function is called when the player 
+    picks option two in the PickDirectionTwo
+    if/else statement. 
+    """
+    S_T("you make your way to the smoke.", 2)
+    S_T("Ash starts to consume the atmosphere.", 2)
+    S_T("the flickering of the fire is the only", 2)
+    S_T("comforting sound you've heard in a while.", 2)
+    S_T("It's a nice sound.", 2)
+    S_T("As you approach the area you see a log being used as a bench.", 2)
+    S_T("A lone figure is occupying one of the benches.", 2)
+    S_T("Hesitantly, you make your way and notice something. \n", 2)
+    S_T("It's the man! the man from the beginning.", 2)
+    S_T("As if by magic, the man turns around. There is no way", 2)
+    S_T("he heard you coming. \n", 2)
+    S_T(f"'Well {name} glad to know you made it this far.", 2)
+    S_T("Although we never doubted you at all. ", 2)
+    S_T("Have you met the predator yet?'", 2)
+    S_T("You shake your head.", 2)
+    S_T("'Oh wow! that's lucky.", 2)
+    S_T("Most people don't make it this far.'", 2)
+    S_T("You have been through the wars though.", 2)
+    S_T("I'm going to offer two potions. You may only pick one though.", 2)
+    S_T("One will increase your health back up, the other will decrease", 2)
+    S_T("your insanity level. So which will it be \n?", 2)
+    HealthStats(0)
+    InsanityStats(0)
+    potion_picker = input("Which potion do you want? (1 Health/ 2 Potion")
+    if potion_picker.lower().strip() == "1":
+        S_T("Good choice. Take this and drink it and your health will", 2)
+        S_T("increase by 3 points. \n", 2)
+        S_T("You take the potion and drink the whole thing in one go,", 2)
+        S_T("forgetting about your dehydration.", 2)
+        S_T("You feel the potion work it's way through your body,", 2)
+        S_T("giving you more strength than before.", 2)
+        HealthStats(3)
+        S_T("", 2)
+        S_T("Something doesn't feel right now though.", 2)
+        S_T("You start hearing noises, but there's nothing around. \n", 2)
+        S_T("The faint chuckles cause you to turn around to see the man", 2)
+        S_T("trying to stifle his laughter. This can't be good. \n", 2)
+        S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
+        S_T("Did you really think I was going to let you just make", 2)
+        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T("learn. Everything comes with a price.' \n", 2)
+        S_T("A pounding in your head clouds your thoughts.", 2)
+        S_T("You quickly piece together what has happened. \n", 2)
+        S_T("'For the price of more health your insanity has been", 2)
+        S_T("increased. HAHAHA!!!' \n", 2)
+        InsanityStats(1)
+        S_T("", 2)
+        S_T("And just like that, the man had disappeared... again.", 2)
+    elif potion_picker == "2":
+        S_T("Good Choice! Take this and your insanity level will", 2)
+        S_T("decrease by 2", 2)
+        S_T("You don't hesitate and gulp the potion down with ease.", 2)
+        S_T("The effects of the potion happen almost instantly,", 2)
+        S_T("your thoughts became clearer. \n", 2)
+        InsanityStats(-2)
+        S_T("However, almost immediately afterwards you feel a sharp", 2)
+        S_T("pain in your stomach, you crouch over to stop the pain.", 2)
+        S_T("The faint chuckles cause you to turn around to see the man", 2)
+        S_T("trying to stifle his laughter. This can't be good. \n", 2)
+        S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
+        S_T("Did you really think I was going to let you just make", 2)
+        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T("learn. Everything comes with a price.' \n", 2)
+        S_T("The stabbing pain only grows worse.", 2)
+        S_T("You quickly piece together what has happened. \n", 2)
+        S_T("'For the price of less insanity your health has been", 2)
+        S_T("decreased. HAHAHA!!!' \n", 2)
+        HealthStats(-3)
+        S_T("", 2)
+        S_T("And just like that, the man had disappeared... again.", 2)
+        
 
 def the_chant():
     """
@@ -399,6 +483,7 @@ def WalkScenarioTwo():
     This function will only be called if the player
      turns right from the PickDirection question.
     """
+
     FightTwo = input("What do you do? (1 Stand still/ 2 Run!) \n")
     if FightTwo.lower().strip() == "1":
         S_T("The ground starts rumbling as you stand frozen.", 2)
@@ -429,7 +514,8 @@ def WalkScenarioTwo():
     
 # the_chant()
 
-TheWalk()
+# TheWalk()
 
-# PlayGame()
+
+PlayGame()
 
