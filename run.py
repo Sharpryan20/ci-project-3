@@ -1,10 +1,7 @@
 import time
 
 UserStats = {
-    """
-    This function is the standard stats for all players.
-    This will alter throughout the game.
-    """
+    
     "health": 10,
     "insanity": 0,
     "weapon": None
@@ -354,11 +351,12 @@ def the_fire():
 
     potion()
 
+
 def potion():
     S_T("It's the man! the man from the beginning.", 2)
     S_T("As if by magic, the man turns around. There is no way", 2)
     S_T("he heard you coming. \n", 2)
-    S_T(f"'Well {name} glad to know you made it this far.", 2)
+    S_T(f"'Well name glad to know you made it this far.", 2)
     S_T("Although we never doubted you at all. ", 2)
     S_T("Have you met the predator yet?'", 2)
     S_T("You shake your head.", 2)
@@ -370,7 +368,7 @@ def potion():
     S_T("your insanity level. So which will it be? \n", 2)
     HealthStats(0)
     InsanityStats(0)
-    potion_picker = input("Which potion do you want? (1 Health/ 2 Potion) \n")
+    potion_picker = input("Which potion do you want? (1 Health/ 2 Insanity) \n")
     if potion_picker.lower().strip() == "1":
         S_T("Good choice. Take this and drink it and your health will", 2)
         S_T("increase by 3 points. \n", 2)
@@ -386,7 +384,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T(f"yourself stronger. Dear name you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("A pounding in your head clouds your thoughts.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -408,7 +406,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T(f"yourself stronger. Dear name you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("The stabbing pain only grows worse.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -419,8 +417,7 @@ def potion():
         S_T("And just like that, the man had disappeared... again.", 2)
     else:
         print("Invalid input. Please try again.")
-
-
+        
 
 def the_chant():
     """
@@ -488,6 +485,12 @@ def the_chant():
     else:
         print("Invalid input. Please try again.")
 
+    S_T("After a while you hear a rustle in the bushes and you", 2)
+    S_T("immediately tense up. However, there was almost a difference", 2)
+    S_T("You saw some eyes glow and a something walked out.", 2)
+
+    potion()
+
 
 def WalkScenarioTwo():
     """
@@ -523,12 +526,12 @@ def WalkScenarioTwo():
 
     TheWalkPartB()
     
-# the_chant()
+the_chant()
 
 # TheWalk()
 
 
 # PlayGame()
 
-the_fire()
+# the_fire()
 
