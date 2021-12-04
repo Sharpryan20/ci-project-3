@@ -346,6 +346,7 @@ def the_chant():
     S_T("your only source of light.", 2)
     S_T("The glow of the moon higlights the chanters, however", 2)
     S_T("they are still silent. \n", 2)
+    S_T("Your insanity level increases by 2.", 2)
     InsanityStats(2)
     CheckStats()
     S_T("", 2)
@@ -362,9 +363,35 @@ def the_chant():
 
     attack_one = input("Do you attack? (yes/no) \n")
     if attack_one.lower().strip() == "yes":
-        fvn
-
-
+        S_T("You take out your weapon and point it to one of the members.", 2)
+        S_T("They try to snatch it out your hands but you are too quick.", 2)
+        S_T("You end up snipping their hands as you pull back.", 2)
+        S_T("However, the rest aren't scared by that encounter,", 2)
+        S_T("in fact they seem to get closer than before.", 2)
+        S_T("They all start chanting again and you immediately", 2)
+        S_T("drop your weapon, becoming completely hypontised.", 2)
+        S_T("You start levitating, only this time no one is grabbing you.", 2)
+        S_T("Then all of a sudden you fell to the ground, hard.", 2)
+        S_T("You lay there unable to move as you are winded. \n", 2)
+        S_T("Your health drops 3 points.", 2)
+        HealthStats(-3)
+        CheckStats()
+        S_T("", 2)
+        S_T("When you look around again, you see that they have all", 2)
+        S_T("disappeared, just like the man back at the building.", 2)
+        S_T("'I wonder if he is connected to them.' You say out loud.", 2)
+        S_T("You make your way over to the fire, and sit down.", 2)
+        S_T("It feels good to be able to sit down.", 2)
+    elif attack_one == "no":
+        S_T("You go to take out your weapon but think better off it.", 2)
+        S_T("There's way to many to take on alone.", 2)
+        S_T("They all slowly turn to face one direction and then", 2)
+        S_T("in unity, they all start gliding away, floating", 2)
+        S_T("out of the cloaks and leaving them on the floor.", 2)
+        S_T("Just like the man in the building.", 2)
+        S_T("The fires tempts you as you realise you are freezing.", 2)
+    else:
+        print("Invalid input. Please try again.")
 
 
 def WalkScenarioTwo():
@@ -400,7 +427,7 @@ def WalkScenarioTwo():
 
     TheWalkPartB()
     
-
+# the_chant()
 
 TheWalk()
 
