@@ -12,6 +12,8 @@ cower = ("cower")
 run = ("run")
 yes = ("yes")
 no = ("no")
+straight = ("straight")
+right = ("right")
 
 
 def S_T(text, delay):
@@ -200,7 +202,7 @@ def Opening():
     S_T("Pool cue...", 0)
 
     global item
-    item = input("Which weapon do you pick? (Sword, Axe, Knife, Cue, Nothing)")
+    item = input("Which weapon do you pick? (Sword, Axe, Knife, Cue, Nothing) \n")
     S_T(f"I see you picked {item}. Good choice", 2)
     S_T(f"You pick up {item}. ", 2)
     S_T("You turn to ask who the predator is but the man is gone.", 2)
@@ -252,24 +254,23 @@ def TheWalk():
     S_T("FINALLY!!! \n", 2)
     S_T("The path splits into two.", 2)
 
-    PickDirection = input("Do you go straight or right? (straight/right) \n")
-    if PickDirection.lower().strip() == "straight":
+    print("Do you go straight or right? (straight/right)")
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in straight and ANSWER not in right:
+        S_T(f"Invalid input Please try again {name}.", 2) 
+        ANSWER = input("").lower().strip() 
+
+    if ANSWER in straight:    
         S_T("You continue and suddenly hear a rustle.", 2)
-
         S_T("You turn to see a bush", 2) 
-
-        WalkScenarioOne()       
-
-    elif PickDirection == "right": 
-
+        WalkScenarioOne()
+    elif ANSWER in right:
         S_T("You turn right and you start walking.", 2)
         S_T("You start hearing things, like screeches.", 2)
         S_T("The noises get louder and louder, becoming", 2)
         S_T("near impossible to even hear your thoughts.", 2)
-        WalkScenarioTwo()  
-
-    else: 
-        print("Invalid input. Please try again.") 
+        WalkScenarioTwo()
     
 
 def TheWalkPartB():
@@ -670,10 +671,10 @@ def the_predators_son():
 
 # the_chant()
 
-# TheWalk()
+TheWalk()
 
 
-PlayGame()
+# PlayGame()
 
 # the_fire()
 
