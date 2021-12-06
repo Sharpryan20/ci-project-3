@@ -18,6 +18,8 @@ use_weapon = ("weapon", "1")
 carry_walking = ("walk", "2")
 chanting = ("chanting", "1")
 fire = ("fire", "2")
+potion_health = ("health", "1")
+potion_insanity = ("insanity", "2")
 
 
 def S_T(text, delay):
@@ -147,7 +149,7 @@ def Opening():
     ANSWER = input("").lower().strip()
 
     while ANSWER not in yes and ANSWER not in no:
-        S_T("Invalid input Please try again.", 2)
+        S_T(f"Invalid input Please try again {name}", 2)
         ANSWER = input("").lower().strip()
     
     if ANSWER in yes:
@@ -302,7 +304,7 @@ def WalkScenarioOne():
     print("What do you do? (1 Use weapon/ 2 Walk)")
     ANSWER = input("").lower().strip()
     while ANSWER not in use_weapon and ANSWER not in carry_walking: 
-        S_T(f"Invalid input Please try again .", 2) 
+        S_T(f"Invalid input Please try again {name}.", 2) 
         ANSWER = input("").lower().strip()
     if ANSWER in use_weapon:
         S_T("You poke the bush and the rustling stops", 2)
@@ -361,7 +363,7 @@ def TheWalk1_A():
     ANSWER = input("").lower().strip()
 
     while ANSWER not in chanting and ANSWER not in fire:
-        S_T(f"Invalid input Please try again name.", 2) 
+        S_T(f"Invalid input Please try again {name}.", 2) 
         ANSWER = input("").lower().strip()
     if ANSWER in chanting:
         the_chant()
@@ -392,7 +394,7 @@ def potion():
     S_T("It's the man! the man from the beginning.", 2)
     S_T("As if by magic, the man turns around. There is no way", 2)
     S_T("he heard you coming. \n", 2)
-    S_T(f"'Well {name} glad to know you made it this far.", 2)
+    S_T("'Well {name} glad to know you made it this far.", 2)
     S_T("Although we never doubted you at all. ", 2)
     S_T("Have you met the predator yet?'", 2)
     S_T("You shake your head.", 2)
@@ -404,8 +406,12 @@ def potion():
     S_T("your insanity level. So which will it be? \n", 2)
     HealthStats(0)
     InsanityStats(0)
-    potion_picker = input("Which potion do you want? (1 Health/ 2 Insanity) \n")
-    if potion_picker.lower().strip() == "1":
+    print("Which potion do you want? (1 Health/ 2 Insanity)")
+    ANSWER = input("").lower().strip()
+    while ANSWER not in potion_health and ANSWER not in potion_insanity:
+        S_T("Invalid input Please try again {name}.", 2) 
+        ANSWER = input("").lower().strip()
+    if ANSWER in potion_health:
         S_T("Good choice. Take this and drink it and your health will", 2)
         S_T("increase by 3 points. \n", 2)
         S_T("You take the potion and drink the whole thing in one go,", 2)
@@ -420,7 +426,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T("yourself stronger. Dear {name} you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("A pounding in your head clouds your thoughts.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -429,7 +435,7 @@ def potion():
         InsanityStats(1)
         S_T("", 2)
         S_T("And just like that, the man had disappeared... again.", 2)
-    elif potion_picker == "2":
+    elif ANSWER in potion_insanity:
         S_T("Good Choice! Take this and your insanity level will", 2)
         S_T("decrease by 2", 2)
         S_T("You don't hesitate and gulp the potion down with ease.", 2)
@@ -442,7 +448,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T("yourself stronger. Dear {name} you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("The stabbing pain only grows worse.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -451,8 +457,6 @@ def potion():
         HealthStats(-3)
         S_T("", 2)
         S_T("And just like that, the man had disappeared... again.", 2)
-    else:
-        print("Invalid input. Please try again.")
         
 
 def the_chant():
@@ -489,8 +493,14 @@ def the_chant():
     S_T("stumble to your feet.", 2)
     S_T("You hold onto your weapon as you decide your next move.", 2)
 
-    attack_one = input("Do you attack? (yes/no) \n")
-    if attack_one.lower().strip() == "yes":
+    print("Do you attack? (yes/no)")
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in yes and ANSWER not in no:
+        S_T(f"Invalid input Please try again {name}.", 2)
+        ANSWER = input("").lower().strip()
+    
+    if ANSWER in yes:
         S_T("You take out your weapon and point it to one of the members.", 2)
         S_T("They try to snatch it out your hands but you are too quick.", 2)
         S_T("You end up snipping their hands as you pull back.", 2)
@@ -510,7 +520,7 @@ def the_chant():
         S_T("'I wonder if he is connected to them.' You say out loud.", 2)
         S_T("You make your way over to the fire, and sit down.", 2)
         S_T("It feels good to be able to sit down.", 2)
-    elif attack_one == "no":
+    elif ANSWER in no:
         S_T("You go to take out your weapon but think better off it.", 2)
         S_T("There's way to many to take on alone.", 2)
         S_T("They all slowly turn to face one direction and then", 2)
@@ -518,8 +528,6 @@ def the_chant():
         S_T("out of the cloaks and leaving them on the floor.", 2)
         S_T("Just like the man in the building.", 2)
         S_T("The fires tempts you as you realise you are freezing.", 2)
-    else:
-        print("Invalid input. Please try again.")
 
     S_T("After a while you hear a rustle in the bushes and you", 2)
     S_T("immediately tense up. However, there was almost a difference", 2)
@@ -680,10 +688,11 @@ def the_predators_son():
         S_T("you cowered.", 2)        
 
 
-# the_chant()
+the_chant()
 
 # TheWalk()
 
+# potion()
 
 # PlayGame()
 
@@ -693,5 +702,5 @@ def the_predators_son():
 
 # the_predators_son()
 
-TheWalk1_A()
+# TheWalk1_A()
 
