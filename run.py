@@ -136,12 +136,19 @@ def Opening():
     S_T("When you approach the door you see a faint orange glow ", 2)
     S_T("appear in the doorway, which is slightly ajar \n", 2)
 
-    OpenDoor = input("Do you open the door? (yes/no): \n")
-    if OpenDoor.lower().strip() == "yes":
+    print("Do you open the door? (yes/no?)")
+
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in yes and ANSWER not in no:
+        S_T("Invalid input Please try again.", 2)
+        ANSWER = input("").lower().strip()
+    
+    if ANSWER in yes:
         S_T("The door slowly creeps open revealing an open room,", 2)
         S_T("and in the middle of it stands a tall dark figure,", 2)
         S_T("a cloak covering the entity from head to toe.", 2)
-    elif OpenDoor == "no":
+    elif ANSWER in no:
         S_T("You walk around and peer through a window", 2)
         S_T("for a better look when suddenly a dark figure", 2)
         S_T("jumps at the window. Startled, you take a step back.", 2)
@@ -150,8 +157,6 @@ def Opening():
         S_T("Your insanity level has increased \n", 2)
         InsanityStats(+2)
         CheckStats()
-    else:
-        print("Invalid input. Try again")
 
     S_T("The man lifts his hood and points to a chair.", 2)
     S_T("You catch on and sit down in the worn chair", 2)
@@ -659,10 +664,12 @@ def the_predators_son():
 # TheWalk()
 
 
-PlayGame()
+# PlayGame()
 
 # the_fire()
 
 # compass()
 
 # the_predators_son()
+
+Opening()
