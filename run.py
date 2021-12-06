@@ -620,6 +620,17 @@ def the_predators_son():
     S_T("The strength of knowing your Grandma ", 2)
     S_T("has potentially gone through this has", 2)
     S_T("made you willing to fight back.", 2)
+    S_T("With every step you took, the roars got", 2)
+    S_T("louder and the ground shaked more.", 2)
+    S_T("It was almost time. \n", 2)
+    S_T("Whipping noises rung through your ears", 2)
+    S_T("as the predator surrounds you.", 2)
+    S_T("He is constantly speeding up, which", 2)
+    S_T("is kicking up a lot of dirt and making it", 2)
+    S_T("harder to see. \n.", 2)
+    S_T("Then he stops...", 2)
+    S_T("And pounces... \n", 2)
+    
     
 
 
