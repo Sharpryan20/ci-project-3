@@ -356,7 +356,7 @@ def potion():
     S_T("It's the man! the man from the beginning.", 2)
     S_T("As if by magic, the man turns around. There is no way", 2)
     S_T("he heard you coming. \n", 2)
-    S_T(f"'Well name glad to know you made it this far.", 2)
+    S_T(f"'Well {name} glad to know you made it this far.", 2)
     S_T("Although we never doubted you at all. ", 2)
     S_T("Have you met the predator yet?'", 2)
     S_T("You shake your head.", 2)
@@ -384,7 +384,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T(f"yourself stronger. Dear name you still have a lot to", 2)
+        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("A pounding in your head clouds your thoughts.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -406,7 +406,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T(f"yourself stronger. Dear name you still have a lot to", 2)
+        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("The stabbing pain only grows worse.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -525,8 +525,66 @@ def WalkScenarioTwo():
         print("Invalid input. Please try again")
 
     TheWalkPartB()
-    
-the_chant()
+    the_walk1_b()
+
+
+def the_walk1_b():
+    """
+    This function is called after the player 
+    has gone through TheWalkScenarioTwo(). 
+    """
+
+    S_T("You are thirsty but there's no water around.", 2)
+    S_T("There was a water source about a mile back that", 2)
+    S_T("you remember seeing but decide against it as.", 2)
+    S_T("Those deers were running from something and", 2)
+    S_T("you weren't about to find out either.", 2)
+    S_T("Forward was the only option. \n", 2)
+    S_T("The trek began to take a toll on you.", 2)
+    S_T("You needed to sit down as soon as.", 2)
+    S_T("But just as you were about to the stop,", 2)
+    S_T("the sound of trickling water blessed your", 2)
+    S_T("ears. You sprint as fast as your tired", 2)
+    S_T("legs will take you. \n", 2)
+    S_T("A river!! \n", 2)
+    S_T("It has been the best thing to happen since", 2)
+    S_T("you woke up in this nightmare", 2)
+    S_T("You bend down and cup your hands,", 2)
+    S_T("trying to gather as much as possible.", 2)
+    S_T("The night grew more cold, causing shivers", 2)
+    S_T("to run through your spine like electical", 2)
+    S_T("currents. Warmth will be the next task.", 2)
+    S_T("The path is no longer in eyesight as you", 2)
+    S_T("strayed away from it to get hydrated.", 2)
+    S_T("Every direction looks the same.", 2)
+    pick_direction_three = input("Which direction shall you go?")
+
+
+def compass():
+    pick_direction_three = input("Which direction shall you go? (North/South/East/west) \n")
+    if pick_direction_three.lower().strip() == "north":
+        S_T("You start walking North but after a while", 2)
+        S_T("you are stopped by an invisible barrier.", 2)
+        S_T("There is no other choice but to go back. \n", 2)
+        compass()
+    elif pick_direction_three == "South":
+        S_T("South seems like a wise choice.", 2)
+        S_T("There's a lot of coverage with trees", 2)
+        S_T("but not too much that you can't see", 2)
+        S_T("potential dangers.", 2)
+        S_T("After a while you realise the", 2)
+        S_T("area seems familar. \n", 2)
+        S_T("You are back at the river, the", 2)
+        S_T("exact same spot. Your footprints", 2)
+        S_T("remain indented in the floor.", 2)
+        S_T("You'll need to pick another", 2)
+        S_T("direction. \n", 2)
+        compass()
+    else:
+        print("invalid input. Please try again.")
+   
+
+#the_chant()
 
 # TheWalk()
 
@@ -534,4 +592,6 @@ the_chant()
 # PlayGame()
 
 # the_fire()
+
+compass()
 
