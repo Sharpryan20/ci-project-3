@@ -166,15 +166,19 @@ def Opening():
     S_T(f"So {name}, I see you are finally awake!", 2)
     S_T("Do you want to know why you are here? \n", 2)
 
-    AnswerBack = input("Do you answer back? (yes/no) \n")
-    if AnswerBack.lower().strip() == "yes":
+    print("Do you answer back? (yes/no)")
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in yes and ANSWER not in no:
+        S_T(f"Invalid input Please try again {name}.", 2)
+        ANSWER = input("").lower().strip()
+    if ANSWER in yes:
         S_T("You nod and say;'Wait how do you know my name?'", 2)
         S_T("'Where am I?'", 2)
-    elif AnswerBack == "no":
+    
+    elif ANSWER in no:
         S_T("You questioned how he knew your name", 2)
         S_T("but decided not to say anything.", 2)
-    else:
-        print("Invalid input. Try again")
 
     S_T("The man paces back and forth, almost to say something", 2)
     S_T("'It doesn't matter how I know your name!'", 2)
@@ -664,7 +668,7 @@ def the_predators_son():
 # TheWalk()
 
 
-# PlayGame()
+PlayGame()
 
 # the_fire()
 
@@ -672,4 +676,3 @@ def the_predators_son():
 
 # the_predators_son()
 
-Opening()
