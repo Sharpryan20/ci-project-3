@@ -9,9 +9,10 @@ UserStats = {
 
 ANSWER = " "
 cower = ("cower")
-run = ("run")
+run = ("run", "2")
 yes = ("yes")
 no = ("no")
+stand = ("stand", "1")
 straight = ("straight")
 right = ("right")
 use_weapon = ("weapon", "1")
@@ -20,6 +21,10 @@ chanting = ("chanting", "1")
 fire = ("fire", "2")
 potion_health = ("health", "1")
 potion_insanity = ("insanity", "2")
+north = ("north", "n")
+east = ("east", "e")
+south = ("south", "s")
+west = ("west", "w")
 
 
 def S_T(text, delay):
@@ -541,17 +546,21 @@ def WalkScenarioTwo():
     This function will only be called if the player
      turns right from the PickDirection question.
     """
+    print("What do you do? (1 Stand/ 2 Run)")
+    ANSWER = input("").lower().strip()
 
-    FightTwo = input("What do you do? (1 Stand still/ 2 Run!) \n")
-    if FightTwo.lower().strip() == "1":
+    while ANSWER not in stand and ANSWER not in run: 
+        S_T(f"Invalid input Please try again {name}.", 2) 
+        ANSWER = input("").lower().strip()
+    if ANSWER in stand:
         S_T("The ground starts rumbling as you stand frozen.", 2)
         S_T("Then out of nowhere, a herd of deers come stampeding", 2)
         S_T("towards you. You crouch down to avoid a blow.", 2)
         S_T("However that wasn't wise. The deers trampled you as", 2)
         S_T("you laid hopeless. You lose 3 health.", 2)
         HealthStats(-3)
-        CheckStats()  
-    elif FightTwo == "2":
+        CheckStats()
+    elif ANSWER in run:
         S_T("You bolt in the opposite direction of the sounds,", 2)
         S_T("trying your best to out run the predators.", 2)
         S_T("However it wasn't a predator but a herd of deer.", 2)
@@ -565,8 +574,6 @@ def WalkScenarioTwo():
         S_T("'What was they running from?'", 2)
         S_T("You hop off the deer and head back, realising you", 2)
         S_T("had dropped your weapon.", 2)
-    else:
-        print("Invalid input. Please try again")
 
     TheWalkPartB()
     the_walk1_b()
@@ -601,16 +608,22 @@ def the_walk1_b():
     S_T("The path is no longer in eyesight as you", 2)
     S_T("strayed away from it to get hydrated.", 2)
     S_T("Every direction looks the same.", 2)
-    
+
+    compass()    
 
 def compass():
-    pick_direction_three = input("Which direction shall you go? (North/South/East/west) \n")
-    if pick_direction_three.lower().strip() == "north":
+    print("Which direction shall you go? (North/South/East/West)")
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in north and ANSWER not in south and ANSWER not in east and ANSWER not in west: 
+        S_T(f"Invalid input Please try again {name}.", 2) 
+        ANSWER = input("").lower().strip()
+    if ANSWER in north:
         S_T("You start walking North but after a while", 2)
         S_T("you are stopped by an invisible barrier.", 2)
         S_T("There is no other choice but to go back. \n", 2)
         compass()
-    elif pick_direction_three == "South":
+    elif ANSWER in south:
         S_T("South seems like a wise choice.", 2)
         S_T("There's a lot of coverage with trees", 2)
         S_T("but not too much that you can't see", 2)
@@ -623,7 +636,7 @@ def compass():
         S_T("You'll need to pick another", 2)
         S_T("direction. \n", 2)
         compass()
-    elif pick_direction_three == "East":
+    elif ANSWER in east:
         S_T("East was in the same direction as", 2)
         S_T("the flow of river. \n", 2)
         S_T("'It has to lead somewhere.", 2)
@@ -648,11 +661,8 @@ def compass():
         S_T("as a roar ruptures through the sky. \n", 2)
         S_T("The predator is near. \n", 2)
         the_predators_son()
-    elif pick_direction_three == "West":
+    elif ANSWER in west:
         S_T("", 2)
-
-    else:
-        print("invalid input. Please try again.")
    
 def the_predators_son():
     """
@@ -680,27 +690,12 @@ def the_predators_son():
 
     while ANSWER not in run and ANSWER not in cower:
         S_T(f"Invalid input name. Please try again {name}", 2)
-        ANSWER = input("=>").lower().strip()  
+        ANSWER = input("").lower().strip()  
 
     if ANSWER in run:
         S_T("You ran", 2)
     elif ANSWER in cower:
         S_T("you cowered.", 2)        
 
-
-the_chant()
-
-# TheWalk()
-
-# potion()
-
-# PlayGame()
-
-# the_fire()
-
-# compass()
-
-# the_predators_son()
-
-# TheWalk1_A()
-
+# WalkScenarioTwo()
+compass()
