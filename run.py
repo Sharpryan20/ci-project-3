@@ -7,6 +7,12 @@ UserStats = {
     "weapon": None
 }
 
+ANSWER = " "
+cower = ("cower")
+run = ("run")
+yes = ("yes")
+no = ("no")
+
 
 def S_T(text, delay):
     """
@@ -95,9 +101,16 @@ def PlayGame():
   |   | |   |         |   |\  \|  |  | |
   |___| |___|_________|___| \_____|  |_|
     \033[0m\n''')
-    WantToPlay = input("Are you ready to join us in The Hunt? (Yes/No): \n")
-    if WantToPlay.lower().strip() == "yes":
+    
+    print("Are you ready to join us in The Hunt? (yes/no)")
 
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in yes and ANSWER not in no:
+        S_T("Invalid input Please try again.", 2)
+        ANSWER = input("").lower().strip()
+    
+    if ANSWER in yes:
         S_T("Brillant!! Lets start", 2)
 
         global name 
@@ -105,11 +118,8 @@ def PlayGame():
         S_T(f"Hello {name}... GOODLUCK!!!", 2)
         S_T("HAHAHAHA \n", 2)
         Opening()
-
-    elif WantToPlay == "no":
+    elif ANSWER in no:
         print("That's a shame. See you around!")
-    else:
-        print("I'm sorry. I'm not too sure what you mean. Please try again")
 
 
 def Opening():
@@ -627,11 +637,21 @@ def the_predators_son():
     S_T("as the predator surrounds you.", 2)
     S_T("He is constantly speeding up, which", 2)
     S_T("is kicking up a lot of dirt and making it", 2)
-    S_T("harder to see. \n.", 2)
+    S_T("harder to see. \n", 2)
     S_T("Then he stops...", 2)
     S_T("And pounces... \n", 2)
-    
-    
+    print("What do you do? (cower/run)")
+
+    ANSWER = input("=>").lower().strip()
+
+    while ANSWER not in run and ANSWER not in cower:
+        S_T(f"Invalid input name. Please try again", 2)
+        ANSWER = input("=>").lower().strip()  
+
+    if ANSWER in run:
+        S_T("You ran", 2)
+    elif ANSWER in cower:
+        S_T("you cowered.", 2)        
 
 
 # the_chant()
@@ -639,8 +659,10 @@ def the_predators_son():
 # TheWalk()
 
 
-# PlayGame()
+PlayGame()
 
 # the_fire()
 
-compass()
+# compass()
+
+# the_predators_son()
