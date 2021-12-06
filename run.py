@@ -14,6 +14,8 @@ yes = ("yes")
 no = ("no")
 straight = ("straight")
 right = ("right")
+use_weapon = ("weapon", "1")
+carry_walking = ("walk", "2")
 
 
 def S_T(text, delay):
@@ -295,8 +297,12 @@ def WalkScenarioOne():
     Will only be called if player continues straight in
     the PickDirection if/else statement.
     """
-    FightOne = input("What do you do? (1 Use weapon/2 Carry on walking) \n")
-    if FightOne.lower().strip() == "1":
+    print("What do you do? (1 Use weapon/ 2 Walk)")
+    ANSWER = input("").lower().strip()
+    while ANSWER not in use_weapon and ANSWER not in carry_walking: 
+        S_T(f"Invalid input Please try again .", 2) 
+        ANSWER = input("").lower().strip()
+    if ANSWER in use_weapon:
         S_T("You poke the bush and the rustling stops", 2)
         S_T("but a few seconds later a badger jumps at you", 2)
         S_T("and scratches you.", 1)
@@ -304,12 +310,10 @@ def WalkScenarioOne():
         HealthStats(-2)
         InsanityStats(2)
         CheckStats()
-    elif FightOne == "2":
+    elif ANSWER in carry_walking:
         S_T("The rustling stops after a few seconds.", 2)
         S_T("you quickly scurry past and continue your walk,", 2)
         S_T("careful not to disturb the beast.", 2)
-    else:
-        print("Invalid input. Please try again.")
     
     TheWalkPartB()
     TheWalk1_A()
@@ -660,7 +664,7 @@ def the_predators_son():
     ANSWER = input("=>").lower().strip()
 
     while ANSWER not in run and ANSWER not in cower:
-        S_T(f"Invalid input name. Please try again", 2)
+        S_T(f"Invalid input name. Please try again {name}", 2)
         ANSWER = input("=>").lower().strip()  
 
     if ANSWER in run:
@@ -671,7 +675,7 @@ def the_predators_son():
 
 # the_chant()
 
-TheWalk()
+# TheWalk()
 
 
 # PlayGame()
@@ -681,4 +685,6 @@ TheWalk()
 # compass()
 
 # the_predators_son()
+
+WalkScenarioOne()
 
