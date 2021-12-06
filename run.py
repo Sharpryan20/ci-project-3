@@ -557,8 +557,7 @@ def the_walk1_b():
     S_T("The path is no longer in eyesight as you", 2)
     S_T("strayed away from it to get hydrated.", 2)
     S_T("Every direction looks the same.", 2)
-    pick_direction_three = input("Which direction shall you go?")
-
+    
 
 def compass():
     pick_direction_three = input("Which direction shall you go? (North/South/East/west) \n")
@@ -580,11 +579,51 @@ def compass():
         S_T("You'll need to pick another", 2)
         S_T("direction. \n", 2)
         compass()
+    elif pick_direction_three == "East":
+        S_T("East was in the same direction as", 2)
+        S_T("the flow of river. \n", 2)
+        S_T("'It has to lead somewhere.", 2)
+        S_T("All rivers lead to something.'", 2)
+        S_T("You say out loud. up until today", 2)
+        S_T("you never spoke to yourself but ", 2)
+        S_T("today has changed all that.", 2)
+        S_T("Your grandma told you one day", 2)
+        S_T("'you'll start and won't ever want", 2)
+        S_T("to stop. Mine started one day in", 2)
+        S_T("the forest while trekking through", 2)
+        S_T("some serious thunderstorms.' \n", 2)
+        S_T("You stop dead in your tracks.", 2)
+        S_T("The story of your grandma seemed", 2)
+        S_T("a little too like your situation", 2)
+        S_T("right now.", 2)
+        S_T("Did Grandma go through this as well?", 2)
+        S_T("Is that why everything looks so", 2)
+        S_T("familar? \n", 2)
+        S_T("Just as you finish that thought", 2)
+        S_T("the ground beging shaking violently", 2)
+        S_T("as a roar ruptures through the sky. \n", 2)
+        S_T("The predator is near. \n", 2)
+        the_predators_son()
+    elif pick_direction_three == "West":
+        S_T("", 2)
+
     else:
         print("invalid input. Please try again.")
    
+def the_predators_son():
+    """
+    This function is called if the player 
+    picks 'East'when asked which direction
+    they want to go from function compass.
+    """
+    S_T("You make your way towards the roar", 2)
+    S_T("The strength of knowing your Grandma ", 2)
+    S_T("has potentially gone through this has", 2)
+    S_T("made you willing to fight back.", 2)
+    
 
-#the_chant()
+
+# the_chant()
 
 # TheWalk()
 
@@ -594,4 +633,3 @@ def compass():
 # the_fire()
 
 compass()
-
