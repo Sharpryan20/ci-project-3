@@ -206,27 +206,32 @@ def Opening():
     S_T("You turn to ask who the predator is but the man is gone.", 2)
     S_T("Any indication that he was here is the cloak bundled up.", 2)
     S_T("You bend down and run the cloak through your fingers \n", 2)
-
-    PickUp = input("Do you pick it up? (yes/no) \n")
-    if PickUp.lower().strip() == "yes":
+    
+    print("Do you pick it up? (yes/no)")
+    ANSWER = input("").lower().strip() 
+    while ANSWER not in yes and ANSWER not in no: 
+        S_T(f"Invalid input Please try again {name}.", 2) 
+        ANSWER = input("").lower().strip() 
+    if ANSWER in yes: 
         S_T("You place the cloak over your shoulders and leave.", 2)
-    elif PickUp == "no":
+    elif ANSWER in no:
         S_T("You stand back up and head to the door.", 2)
-    else:
-        print("you can't type that")
 
     S_T("As you leave you notice a drawer cracked open slightly. \n", 2)
 
-    OpenDrawer = input("Do you open it? (yes/no) \n")
-    if OpenDrawer.lower().strip() == "yes":
+    print("Do you open it? (yes/no)")
+    ANSWER = input("").lower().strip() 
+    while ANSWER not in yes and ANSWER not in no: 
+        S_T(f"Invalid input Please try again {name}.", 2) 
+        ANSWER = input("").lower().strip() 
+    if ANSWER in yes:
         S_T("you see a note inside and a photo. It's of you.", 2)
         S_T("You unfold the note and it reads; 'I'm sorry.", 2)
         S_T("They made me do it, Please forgive me!'\n", 2)
-        S_T("You put the note in your pocket and walk out the door.", 2)
-    elif OpenDrawer == "no":
+        S_T("You put the note in your pocket and walk out the door.", 2)    
+    elif ANSWER in no: 
         S_T("You decide not to open it and leave the house. \n", 2)
-    else:
-        print("Invalid input. Try again.")
+
     S_T("You notice a hanging latern the porch.", 2)
     S_T("You take it off the wall and start your journey. \n", 2)
 
