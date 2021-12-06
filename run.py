@@ -16,6 +16,8 @@ straight = ("straight")
 right = ("right")
 use_weapon = ("weapon", "1")
 carry_walking = ("walk", "2")
+chanting = ("chanting", "1")
+fire = ("fire", "2")
 
 
 def S_T(text, delay):
@@ -342,7 +344,7 @@ def TheWalk1_A():
     S_T("It can't be.", 2)
     S_T("You feel a drop on your head and you look up. \n", 2)
     S_T("You muffle your own screams as you realise its not rain but", 2)
-    S_T("Infact blood. \n", 2)
+    S_T("infact blood. \n", 2)
     S_T("THE BEAST! \n", 2)
     S_T("You take off into the woods, no longer following a path.", 2)
     S_T("Your heart pants like crazy, your eyesight blurred,", 2)
@@ -354,13 +356,18 @@ def TheWalk1_A():
     S_T("To your right you smoke rising into the sky, behind the trees.", 2)
     S_T("Fire!!", 2)
     S_T("You are torn for choice.", 2)
-    PickDirectionTwo = input("Where do you go? (1 Chanting/ 2 Fire) \n")
-    if PickDirectionTwo.lower().strip() == "1":
+    
+    print("Where do you go? (1 Chanting/ 2 Fire)")
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in chanting and ANSWER not in fire:
+        S_T(f"Invalid input Please try again name.", 2) 
+        ANSWER = input("").lower().strip()
+    if ANSWER in chanting:
         the_chant()
-    elif PickDirectionTwo == "2":
+    elif ANSWER in fire:
         the_fire()
-    else:
-        print("Invalid input. Please try again.")
+
 
 
 def the_fire():
@@ -686,5 +693,5 @@ def the_predators_son():
 
 # the_predators_son()
 
-WalkScenarioOne()
+TheWalk1_A()
 
