@@ -464,6 +464,10 @@ def potion():
         HealthStats(-3)
         S_T("", 2)
         S_T("And just like that, the man had disappeared... again.", 2)
+    
+    hypnotised()
+
+    
         
 
 def the_chant():
@@ -684,7 +688,26 @@ def compass():
 
         the_fire()
         potion()
-   
+
+
+def hypnotised():
+    S_T("This noise begins to take over your entire body,", 2)
+    S_T("causing you to loose all control.", 2)
+    S_T("Your feet start moving against your will and your", 2)
+    S_T("hands begin swaying in a military formation.", 2)
+    S_T("You seem to be walking so fast as you rush through", 2)
+    S_T("the forest.", 2)
+    S_T("In the far distance you begin to see some castle", 2)
+    S_T("walls stretch across the land. \n", 2)
+    S_T("The CITADEL!! \n", 2)
+    S_T("You have finally made it.", 2)
+    S_T("The darkness slowly started to lift as the sun rose", 2)
+    S_T("beyond the clouds.", 2)
+    S_T("As you near the castle walls you make a sudden stop.", 2)
+    S_T("Each second that goes by you get more control back", 2)
+    S_T("of your body, but you are still under this hypnosis.", 2)
+    S_T("Still frozen in place you watch as the castle gates", 2)
+    S_T("lower down to reveal The predator.", 2)
 
 def the_predators_son():
     """
@@ -785,9 +808,27 @@ def the_predators_son():
     HealthStats(2)
     CheckStats()
 
-    hypontised()
+    hypnotised()
+
+    S_T("However this doesn't look like the one you faced", 2)
+    S_T("earlier. It was thrice as big.", 2)
+    S_T("It had the head of a dog, and the tail like a", 2)
+    S_T("tiger. You thought the", 2)
+    S_T("one earlier was impossible to survive from but this ", 2)
+    S_T("one was actually going to be impossible.", 2)
+    S_T("And just when you thought it couldn't get worse,", 2)
+    S_T("The Beast opens his mouth and speaks... \n", 2)
+    S_T("'So I guess you've met one of my sons.'", 2)
+    S_T("His voice so deep that it shook the ground.", 2)
+    S_T("he stood fimrly, his stance intimdating you.", 2)
+    S_T("'I'll make you pay for what you did to him.", 2)
+    S_T("His brothers aren't very happy either.' \n", 2)
+    S_T("BROTHERS?! There's an entire family of them.", 2)
+    S_T("There is no escape from this... at all.", 2)
 
 
-#the_predators_son()
 
-PlayGame()
+
+the_predators_son()
+
+#PlayGame()
