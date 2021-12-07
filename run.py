@@ -778,6 +778,14 @@ def the_predators_son():
         S_T("You lose 3 health.", 2)
         HealthStats(-3)
         CheckStats()   
+    
+    S_T("You stand up and dust yourself off. You notice an apple", 2)
+    S_T("on the floor. Starving, you eat the entire thing almost", 2)
+    S_T("instantly. Your health increase by 2 points. \n", 2)
+    HealthStats(2)
+    CheckStats()
+
+    hypontised()
 
 
 #the_predators_son()
