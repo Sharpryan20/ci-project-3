@@ -25,6 +25,8 @@ north = ("north", "n")
 east = ("east", "e")
 south = ("south", "s")
 west = ("west", "w")
+wriggle = ("wriggle", "1")
+attack = ("attack", "2")
 
 
 def S_T(text, delay):
@@ -693,9 +695,51 @@ def the_predators_son():
         ANSWER = input("").lower().strip()  
 
     if ANSWER in run:
-        S_T("You ran", 2)
+        S_T("You tried to outrun the pounce but", 2)
+        S_T("not with much luck. the predator clipped", 2)
+        S_T("your clothes as he landed, dragging you", 2)
+        S_T("to the floor. He then continues to drag", 2)
+        S_T("you around on the ground. You can't", 2)
+        S_T("escape.", 2)
+        S_T("after what feels like minutes of torture.", 2)
+        S_T("the predator stops playing with you", 2)
+        S_T("like a toy.", 2)
+        S_T("You lose 3 health.", 2)
+        HealthStats(-3)
+        CheckStats()
+        S_T("however the fight isn't over yet.", 2)
+        S_T("The predator takes a swipe with his", 2)
+        S_T("beast like claws. You are able to dodge.", 2)
+        S_T("This only angers him. He uses his tail", 2)
+        S_T("and grips you around the waist.", 2)
+        S_T("he lifts you in the air and raises you", 2)
+        S_T("just above his head, almost as if playing", 2)
+        S_T("with his food.", 2)
+        print("What do you do? (1 Wriggle/ 2 Attack)")
+        ANSWER = input("").lower().strip()
+
+        while ANSWER not in wriggle and ANSWER not in attack:
+            S_T(f"Invalid input name. Please try again {name}", 2)
+            ANSWER = input("").lower().strip()
+        if ANSWER in wriggle:
+            S_T("You try to wriggle yourself free but the grip", 2)
+            S_T("only gets tighter. You can feel the life being", 2)
+            S_T("squeezed out of you and in that moment you", 2)
+            S_T("believe this is the end.", 2)
+            S_T("You lose 1 health.", 2)
+            HealthStats(-1)
+            CheckStats()
+            S_T("As you are lowered into the beasts mouth,", 2)
+            S_T("you decide on a risky tactic. With all the force", 2)
+            S_T("you can manage you boot the beast square in the face.", 2)
+            S_T("The beast wimpers and immediately drops you", 2)
+            S_T("to the ground.", 2)
+            S_T("The predator bolts off, leaving you on the floor.", 2)
+        elif ANSWER in attack:
+            S_T("With the hand that is free, you reach behind you", 2)
+            S_T(f"and grab out your {item}", 2)
+
     elif ANSWER in cower:
         S_T("you cowered.", 2)        
 
-# WalkScenarioTwo()
-compass()
+the_predators_son()
