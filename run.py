@@ -737,9 +737,16 @@ def the_predators_son():
             S_T("The predator bolts off, leaving you on the floor.", 2)
         elif ANSWER in attack:
             S_T("With the hand that is free, you reach behind you", 2)
-            S_T(f"and grab out your {item}", 2)
+            S_T(f"and grab out your {item}. The predator hisses", 2)
+            S_T("as you raisse the weapon and send it striking", 2)
+            S_T("on his tail.", 2)
+            S_T("A massive clink can be heard as it connects to", 2)
+            S_T("the tail. The tail is made out of some metal.", 2)
+            S_T("The predator still hisses out in pain and drops you.", 2)
+            S_T("The predator bolts off, leaving you on the floor.", 2)
 
     elif ANSWER in cower:
-        S_T("you cowered.", 2)        
+        S_T("You crouch to your knees with you hands in the air.", 2)   
+
 
 the_predators_son()
