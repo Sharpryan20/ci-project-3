@@ -401,7 +401,7 @@ def potion():
     S_T("It's the man! the man from the beginning.", 2)
     S_T("As if by magic, the man turns around. There is no way", 2)
     S_T("he heard you coming. \n", 2)
-    S_T("'Well {name} glad to know you made it this far.", 2)
+    S_T(f"'Well {name} glad to know you made it this far.", 2)
     S_T("Although we never doubted you at all. ", 2)
     S_T("Have you met the predator yet?'", 2)
     S_T("You shake your head.", 2)
@@ -433,7 +433,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T("yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("A pounding in your head clouds your thoughts.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -455,7 +455,7 @@ def potion():
         S_T("trying to stifle his laughter. This can't be good. \n", 2)
         S_T("'Oh Man! you gobbled that right up. Without hesitation.", 2)
         S_T("Did you really think I was going to let you just make", 2)
-        S_T("yourself stronger. Dear {name} you still have a lot to", 2)
+        S_T(f"yourself stronger. Dear {name} you still have a lot to", 2)
         S_T("learn. Everything comes with a price.' \n", 2)
         S_T("The stabbing pain only grows worse.", 2)
         S_T("You quickly piece together what has happened. \n", 2)
@@ -664,8 +664,28 @@ def compass():
         S_T("The predator is near. \n", 2)
         the_predators_son()
     elif ANSWER in west:
-        S_T("", 2)
+        S_T("You go west in hopes of setting up a camp site", 2)
+        S_T("although with your luck there won't be", 2)
+        S_T("anything to set up camp with.", 2)
+        S_T("After about 5 minutes of walking you decide to", 2)
+        S_T("set up here. you begin to look around to find", 2)
+        S_T("any wood that is dry enough to light, although", 2)
+        S_T("everything has been soaked from the rain.", 2)
+        S_T("You try lighting some logs with your latern but", 2)
+        S_T("you burn youself doing so. You start smelling", 2)
+        S_T("smoke in the air but you assume its from the", 2)
+        S_T("attempts of your own fire. However, you look", 2)
+        S_T("around and see smoke rising and and disappearing", 2)
+        S_T("into thin air. \n", 2)
+        S_T("Finally!! \n", 2)
+        S_T("You sprint in the direction of the smoke.", 2)
+        S_T("You can almost fee lthe warmth filling your", 2)
+        S_T("body before you even reach it.", 2)
+
+        the_fire()
+        potion()
    
+
 def the_predators_son():
     """
     This function is called if the player 
@@ -737,7 +757,7 @@ def the_predators_son():
             S_T("The predator bolts off, leaving you on the floor.", 2)
         elif ANSWER in attack:
             S_T("With the hand that is free, you reach behind you", 2)
-            S_T(f"and grab out your {item}. The predator hisses", 2)
+            S_T(f"and grab out your item. The predator hisses", 2)
             S_T("as you raisse the weapon and send it striking", 2)
             S_T("on his tail.", 2)
             S_T("A massive clink can be heard as it connects to", 2)
@@ -746,7 +766,20 @@ def the_predators_son():
             S_T("The predator bolts off, leaving you on the floor.", 2)
 
     elif ANSWER in cower:
-        S_T("You crouch to your knees with you hands in the air.", 2)   
+        S_T("You crouch to your knees with your hands in the air,", 2)
+        S_T("clutching your weapon. A dark shadow glooms over you", 2)
+        S_T("quickly as you see the predator jump. At this moment", 2)
+        S_T("you strike your weapon up, just catching the predators", 2)
+        S_T("stomach. The predator reacted badly, first standing on", 2)
+        S_T("his back legs, screaming out in pain. He then whips", 2)
+        S_T("his tail at you which sends you flying into a nearby", 2)
+        S_T("tree. Winded, you want him scurry away with blurred", 2)
+        S_T("vision.", 2)
+        S_T("You lose 3 health.", 2)
+        HealthStats(-3)
+        CheckStats()   
 
 
-the_predators_son()
+#the_predators_son()
+
+PlayGame()
