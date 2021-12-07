@@ -27,6 +27,9 @@ south = ("south", "s")
 west = ("west", "w")
 wriggle = ("wriggle", "1")
 attack = ("attack", "2")
+dodge = ("1", "dodge")
+legs = ("1", "legs")
+back = ("2", "back")
 
 
 def S_T(text, delay):
@@ -378,7 +381,6 @@ def TheWalk1_A():
         the_fire()
 
 
-
 def the_fire():
     """
     This function is called when the player 
@@ -466,9 +468,8 @@ def potion():
         S_T("And just like that, the man had disappeared... again.", 2)
     
     hypnotised()
-
-    
-        
+    finale_A()
+          
 
 def the_chant():
     """
@@ -617,6 +618,7 @@ def the_walk1_b():
 
     compass()    
 
+
 def compass():
     print("Which direction shall you go? (North/South/East/West)")
     ANSWER = input("").lower().strip()
@@ -690,7 +692,144 @@ def compass():
         potion()
 
 
+def finale_A():
+    S_T("As the predator got closer you could feel the", 2)
+    S_T("fear radiating from your body, and he could sense ", 2)
+    S_T("it. \n", 2)
+    S_T("'I cannot let you in this castle. You are a hard one", 2)
+    S_T("to track down. I've been waiting for this moment for", 2)
+    S_T("20 years. She was right you know! Your grandmother.", 2)
+    S_T("She has been the only person able to beat me, but she", 2)
+    S_T("told that you would be able to as well.' \n", 2)
+    S_T("'What do you know about my Grandma??!!!' You scream", 2)
+    S_T("The Beasts laughter drowing out your screams. He knew", 2)
+    S_T("you were scared.", 2)
+    S_T("You take a defensive stance, your hand holding", 2)
+    S_T("the handle of your weapon.", 2)
+    S_T("Dawn rose through the clouds and you began to take", 2)
+    S_T("in your surroundings. It's not real....", 2)
+    S_T("None of it is. Is it a simulation? \n", 2)
+    S_T("'You've only got 10 minutes to defeat me.' He said", 2)
+    S_T("stil smirking. \n", 2)
+    S_T("'That long huh' you reciprocate his smirk, growing", 2)
+    S_T("more confident by the second...", 2)
+
+
+def finale_B():
+    S_T("The Beast jumps at you.", 2)
+    print("What do you do? (1 dodge/ 2 attack)")
+    ANSWER = input("").lower()
+
+    while ANSWER not in attack and ANSWER not in dodge:
+        S_T(f"Invalid input. Please try again {name}", 2)
+        ANSWER = input("").lower().strip()
+    if ANSWER in dodge:
+        S_T("You successfully dodge the attack.", 2)
+        S_T("This only enrages him more. \n", 2)
+    elif ANSWER in attack:
+        S_T("You strike your weapon at the beast.", 2)
+        S_T("However he is too quick and dodges you, but", 2)
+        S_T("scratches your legs in the process. \n", 2)
+    
+    S_T("The beast turns to look at you again, this time", 2)
+    S_T("with anger pouring at his eyes.", 2)
+    S_T("He roars, which echos and bounces off these", 2)
+    S_T("invisible barriers. It startles you and then", 2)
+    S_T("he strikes you again, charging at full speed.", 2)
+
+    print("What do you do? (1 dodge/ 2 attack)")
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in attack and ANSWER not in dodge:
+        S_T(f"Invalid input. Please try again {name}.", 2)
+        ANSWER = input("").lower().strip()
+
+    if ANSWER in dodge:
+        S_T("You try to dodge but the beast anticipated", 2)
+        S_T("your move this time. He attacks your arm", 2)
+        S_T("You lose one health. \n", 2)
+        HealthStats(-1)
+        CheckStats()
+        S_T("", 2)
+    elif ANSWER in attack:
+        S_T("You stand with your back against him.", 2)
+        S_T("As you hear him get closer you swing at", 2)
+        S_T("full power and hit him straight in the", 2)
+        S_T("face. This sends him back a few feet,", 2)
+        S_T("causing him to lose balance. \n", 2)
+
+    S_T("'You are going to have to try a lot harder than", 2)
+    S_T(f"that {name}. I know your Grandmother did.'", 2)
+    S_T("Hearing him talk about your Grandma like that ", 2)
+    S_T("makes you so angry. Thinking how she had to go", 2)
+    S_T("through this as well. \n", 2)
+    S_T("This time you strike first.", 2)
+
+    print("Where do you attack? (1 legs/ 2 back)")
+    ANSWER = input("").lower().strip()
+
+    while ANSWER not in legs and ANSWER not in back:
+        S_T(f"Invalid input. Please try again {name}", 2)
+        ANSWER = input("").lower().strip()
+
+    if ANSWER in legs:
+        S_T("As you charge towards him, you slide at", 2)
+        S_T("the very last second, sliding underneath", 2)
+        S_T(f"his stomach, your {item} slicing through", 2)
+        S_T("his ankles. This was very effective. \n", 2)
+        S_T("The Beast jumps feets into the air as you", 2)
+        S_T("stand up. His wimpers just as loud as his", 2)
+        S_T("roars. \n", 2)
+    elif ANSWER in back:
+        S_T("You sprint towards the beast,", 2)
+        S_T(f"your {item} up like a javelin.", 2)
+        S_T("The beast tries to use his tail", 2)
+        S_T("to grab you but you stand on it", 2)
+        S_T("and jump high into the air.", 2)
+        S_T("you land on his back and run your", 2)
+        S_T("weapon along his back.", 2)
+        S_T("He screams out of pain, standing", 2)
+        S_T("on his back, launching you far away.", 2)
+        S_T("You crouch and roll on the ground", 2)
+        S_T("as you connect to the floor. \n", 2)
+    
+    S_T("The beast is growing tired, but you have", 2)
+    S_T("only just started. Your energy grows.", 2)
+    S_T("The beast doesn't stop his attacks though.", 2)
+    S_T("You watch as his runs and jumps up the castle", 2)
+    S_T("walls.", 2)
+    S_T("He twists around and launches himself towards", 2)
+    S_T("you. \n", 2)
+
+    print("What do you do? (1 dodge/ 2 attack)")
+    ANSWER = input("").lower().strip()
+     
+    while ANSWER not in dodge and ANSWER not in attack:
+        S_T(f"Invalid input. Please try again {name}.", 2)
+        ANSWER = input("").lower().strip()
+    
+    if ANSWER in dodge:
+        S_T("You roll out the way but the beast could sense it.", 2)
+        S_T("he changed his direction mid way in the air", 2)
+        S_T("landed right on top of you.", 2)
+        S_T("You lose 2 health.", 2)
+        HealthStats(-2)
+        CheckStats()
+    elif ANSWER in attack:
+        S_T("You try to attack him from below but he", 2)
+        S_T("had the high ground. Your attack was ineffective.", 2)
+        S_T("You lose 3 health.", 2)
+        HealthStats(-3)
+        CheckStats()
+
+
+
 def hypnotised():
+    """
+    Function is called no matter what path 
+    the player chooses. This is the function
+    to take them to the end battle.
+    """
     S_T("This noise begins to take over your entire body,", 2)
     S_T("causing you to loose all control.", 2)
     S_T("Your feet start moving against your will and your", 2)
@@ -708,6 +847,7 @@ def hypnotised():
     S_T("of your body, but you are still under this hypnosis.", 2)
     S_T("Still frozen in place you watch as the castle gates", 2)
     S_T("lower down to reveal The predator.", 2)
+
 
 def the_predators_son():
     """
@@ -826,9 +966,11 @@ def the_predators_son():
     S_T("BROTHERS?! There's an entire family of them.", 2)
     S_T("There is no escape from this... at all.", 2)
 
+    finale_A()
 
 
 
-the_predators_son()
 
-#PlayGame()
+
+
+PlayGame()
