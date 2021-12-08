@@ -1,7 +1,6 @@
 import time
 
 user_stats = {
-    
     "health": 10,
     "insanity": 0,
     "weapon": None
@@ -37,7 +36,6 @@ def s_t(text: str, delay: int):
     Prints out a line of text for the story and delays
     the next line for a certain amount of time.
     """
-
     print(text)
     time.sleep(delay)
 
@@ -47,7 +45,6 @@ def health_stats(health_number: int):
     Increases or decreases the users health by a specified amount
     then displys the users with the new health score.
     """
-
     user_stats["health"] = user_stats["health"] + (health_number)
     s_t("Your health is: " + str(user_stats['health']), 2)
 
@@ -79,7 +76,6 @@ def max_insanity():
     If the users inasity level reaches above 5, the player will halluncinate
     and the game will be over.
     """
-
     s_t("You start to see things, things that aren't really there.", 2)
     s_t("There is no going back now.", 2)
     s_t("You lose all control over your body and you run off...", 2)
@@ -93,7 +89,6 @@ def check_stats():
     the correct function will be called and it will be 
     game over.
     """
-
     if user_stats["health"] <= 0:
         no_health()
     if user_stats["insanity"] >= 5:
@@ -121,16 +116,12 @@ def play_game():
     \033[0m\n''')
     
     print("Are you ready to join us in The Hunt? (yes/no)")
-
     ANSWER = input("").lower().strip()
-
     while ANSWER not in yes and ANSWER not in no:
         s_t("Invalid input Please try again.", 2)
         ANSWER = input("").lower().strip()
-    
     if ANSWER in yes:
         s_t("Brillant!! Lets start", 2)
-
         global name 
         name = input("What is your name? \n")
         s_t(f"Hello {name}... GOODLUCK!!!", 2)
@@ -141,6 +132,9 @@ def play_game():
 
 
 def opening():
+    """
+    Function called after player has entered their name.
+    """
     s_t("You wake up... dazed!", 2)
     s_t("The gloomy forest sets in as you realise you are lost.", 2)
     s_t("The place has a sense of familarity but", 2)
@@ -161,7 +155,6 @@ def opening():
     while ANSWER not in yes and ANSWER not in no:
         s_t(f"Invalid input Please try again {name}", 2)
         ANSWER = input("").lower().strip()
-    
     if ANSWER in yes:
         s_t("The door slowly creeps open revealing an open room,", 2)
         s_t("and in the middle of it stands a tall dark figure,", 2)
@@ -209,18 +202,13 @@ def opening():
     s_t("you have been assigned the role of prey.", 2)
     s_t("You have 8 hours to survive the forest and make it to", 2)
     s_t("THE CITADEL!!", 2)
-    s_t("You will have a weapon of your choosing.", 2)
-    s_t("The man makes his way over to a locked door.", 2)
-    s_t("He opens it and reveals a variety of weapons.", 2)
-    s_t("Axes...", 0)
-    s_t("Knives...", 0)
-    s_t("Swords...", 0)
-    s_t("Pool cue...", 0)
-
+    s_t("You will be given a weapon though.", 2)
+    s_t("He makes his way towards the cupboard and opens it.", 2)
+    s_t("He hands you over a sword.", 2)
     global item
-    item = input("Which weapon do you pick? (Sword, Axe, Knife, Cue, Nothing) \n")
-    s_t(f"I see you picked {item}. Good choice", 2)
-    s_t(f"You pick up {item}. ", 2)
+    item = input("What do you name the sword? \n")
+    s_t(f"I see you named it {item}. Good choice", 2)
+    s_t(f"You pick up {item}.", 2)
     s_t("You turn to ask who the predator is but the man is gone.", 2)
     s_t("Any indication that he was here is the cloak bundled up.", 2)
     s_t("You bend down and run the cloak through your fingers \n", 2)
@@ -713,6 +701,7 @@ def finale_a():
     s_t("stil smirking. \n", 2)
     s_t("'That long huh' you reciprocate his smirk, growing", 2)
     s_t("more confident by the second...", 2)
+    finale_b()
 
 
 def finale_b():
@@ -821,6 +810,48 @@ def finale_b():
         s_t("You lose 3 health.", 2)
         health_stats(-3)
         check_stats()
+    finale_c()
+
+
+def finale_c():
+    s_t("The beast was effective with his attacks. He was still", 2)
+    s_t("weak from your blows though. 'Not long now' you think", 2)
+    s_t("to yourself. One more attack and he should be defeated. \n", 2)
+    s_t("You both charge towards each other and almost in sync,", 2)
+    s_t("you both jump high into the air.", 2)
+    s_t("You somehow get a higher jump than the beast and land", 2)
+    s_t("on his head, to which you use it as a launchpad.", 2)
+    s_t(f"while in the air you take out your {item} and land", 2)
+    s_t("on the Beasts back as you both continue to fall to the", 2)
+    s_t("ground. the beast collapses to the floor as you plummet", 2)
+    s_t("your weapon into his back. He screams out. \n", 2)
+    s_t("It's not over though.", 2)
+    s_t("You get off the beast and fall to the floor. You are", 2)
+    s_t("exhausted from the fight.", 2)
+    s_t("All of a sudden you see these lights come down from", 2)
+    s_t("the sky and lift the beast in the air.", 2)
+    s_t("They wrap around him like a blanket, and within", 2)
+    s_t("seconds the beast had transformed into a man... \n", 2)
+    s_t("THE MAN! \n", 2)
+    s_t("It was him all along. \n", 2)
+    s_t("He starts to talk, but not from his mouth, almost as", 2)
+    s_t("if someone was talking for him. \n", 2)
+    s_t("'Well done! I wasn't sure if you actually had it in", 2)
+    s_t("you to defeat him. I modified him and made him stronger", 2)
+    s_t("since I was able to defeat him.' The voice spoke. Strangely", 2)
+    s_t("familiar. Then it hit you. \n", 2)
+    s_t("'Grandma?' You manage to stutter. \n", 2)
+    s_t("'Well you figured it out! It is me dear! Your sister", 2)
+    s_t("couldn't figure it out though. I'll explain it all", 2)
+    s_t("soon I promise.'", 2)
+    s_t("And with that the voice was gone and the man dropped", 2)
+    s_t("to the floor. Seconds after an intercom system spoke out.", 2)
+    s_t("'Welcome...", 2)
+    s_t("To...", 2)
+    s_t("The...", 2)
+    s_t("Hunt... \n", 2)
+    s_t("It's Not Over!... \n", 2)
+    s_t("To Be Continued!", 2)
 
 
 def hypnotised():
