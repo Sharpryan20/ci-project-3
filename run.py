@@ -559,7 +559,7 @@ def walk_scenario_two():
         s_t("You bolt in the opposite direction of the sounds,", 2)
         s_t("trying your best to out run the predators.", 2)
         s_t("However it wasn't a predator but a herd of deer.", 2)
-        s_t("They were sprinting at full spped and almost", 2)
+        s_t("They were sprinting at full speed and almost", 2)
         s_t("immediately ran past you. One wasn't quite as fast", 2)
         s_t("and was beginning to trail behind. You wait for it", 2)
         s_t("to get closer to you and as it apporaches you grab his", 2)
@@ -853,6 +853,17 @@ def finale_c():
     s_t("It's Not Over!... \n", 2)
     s_t("To Be Continued!", 2)
 
+    print("Would you like to play again? (yes/no)")
+    ANSWER = input("").lower().strip()
+    while ANSWER not in yes and ANSWER not in no:
+        s_t("Invalid input. Please try again.", 2)
+        ANSWER = input("").lower().strip()
+    if ANSWER in yes:
+        s_t("Great! lets go again.", 2)
+        play_game()
+    elif ANSWER in no:
+        s_t("Okay no worries! Hope you enjoyed yourself.", 2)
+
 
 def hypnotised():
     """
@@ -901,7 +912,7 @@ def the_predators_son():
     s_t("And pounces... \n", 2)
     print("What do you do? (cower/run)")
 
-    ANSWER = input("=>").lower().strip()
+    ANSWER = input("").lower().strip()
 
     while ANSWER not in run and ANSWER not in cower:
         s_t(f"Invalid input name. Please try again {name}", 2)
@@ -951,7 +962,7 @@ def the_predators_son():
         elif ANSWER in attack:
             s_t("With the hand that is free, you reach behind you", 2)
             s_t(f"and grab out your {item}. The predator hisses", 2)
-            s_t("as you raisse the weapon and send it striking", 2)
+            s_t("as you raise the weapon and send it striking", 2)
             s_t("on his tail.", 2)
             s_t("A massive clink can be heard as it connects to", 2)
             s_t("the tail. The tail is made out of some metal.", 2)
