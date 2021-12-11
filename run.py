@@ -1,12 +1,14 @@
 import time
 
 user_stats = {
+    # Players inital stats.
     "health": 10,
     "insanity": 0,
-    "weapon": None
 }
 
 ANSWER = " "
+# These are all possible answers to the questions
+# the players will be asked.
 cower = ("cower")
 run = ("run", "2")
 yes = ("yes")
@@ -29,7 +31,6 @@ attack = ("attack", "2")
 dodge = ("1", "dodge")
 legs = ("1", "legs")
 back = ("2", "back")
-
 
 def s_t(text: str, delay: int):
     """
@@ -608,6 +609,10 @@ def the_walk_1_b():
 
 
 def compass():
+    """
+    This function is called after 
+    the_walk_1_b.
+    """
     print("Which direction shall you go? (North/South/East/West)")
     ANSWER = input("").lower().strip()
 
@@ -681,6 +686,11 @@ def compass():
 
 
 def finale_a():
+    """
+    This function is called no matter what path
+    the users take. This is the start of the 
+    finale.
+    """
     s_t("As the predator got closer you could feel the", 2)
     s_t("fear radiating from your body, and he could sense ", 2)
     s_t("it. \n", 2)
@@ -705,6 +715,11 @@ def finale_a():
 
 
 def finale_b():
+    """
+    This function is called after finale_a.
+    This is all the questions the players
+    wille be asked in the finale.
+    """
     s_t("The Beast jumps at you.", 2)
     print("What do you do? (1 dodge/ 2 attack)")
     ANSWER = input("").lower()
@@ -814,6 +829,11 @@ def finale_b():
 
 
 def finale_c():
+    """
+    This is the final function called
+    in this file. It also asks the player if
+    they want to play again.
+    """
     s_t("The beast was effective with his attacks. He was still", 2)
     s_t("weak from your blows though. 'Not long now' you think", 2)
     s_t("to yourself. One more attack and he should be defeated. \n", 2)
