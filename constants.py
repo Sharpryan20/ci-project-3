@@ -1,19 +1,19 @@
 user_stats = {
+    # Players inital stats.
     "health": 10,
     "insanity": 0,
-    "weapon": None
 }
 
 ANSWER = " "
 # These are all possible answers to the questions
 # the players will be asked.
-cower = ("cower")
+cower = "cower"
 run = ("run", "2")
-yes = ("yes")
-no = ("no")
+yes = "yes"
+no = "no"
 stand = ("stand", "1")
-straight = ("straight")
-right = ("right")
+straight = "straight"
+right = "right"
 use_weapon = ("weapon", "1")
 carry_walking = ("walk", "2")
 chanting = ("chanting", "1")
