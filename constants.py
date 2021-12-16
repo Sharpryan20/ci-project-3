@@ -4,7 +4,6 @@ user_stats = {
     "insanity": 0,
 }
 
-ANSWER = " "
 # These are all possible answers to the questions
 # the players will be asked.
 cower = "cower"
