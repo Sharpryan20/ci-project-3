@@ -695,7 +695,7 @@ def compass():
         potion()
 
 
-def finale_a():
+def finale_part_a():
     """
     This function is called no matter what path
     the users take. This is the start of the
@@ -724,7 +724,7 @@ def finale_a():
     finale_b()
 
 
-def finale_b():
+def finale_part_b():
     """
     This function is called after finale_a.
     This is all the questions the players
@@ -838,7 +838,7 @@ def finale_b():
     finale_c()
 
 
-def finale_c():
+def finale_part_c():
     """
     This is the final function called
     in this file. It also asks the player if
