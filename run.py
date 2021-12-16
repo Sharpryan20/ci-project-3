@@ -31,17 +31,17 @@ def play_again():
     """
     print("Would you like to play again? (yes/no)")
     answer = input("").lower().strip()
-    while answer not in yes and answer not in no:
+    while answer not in YES and answer not in NO:
         print_sleep(
             "Invalid input. Please try again.", 2
             )
         answer = input("").lower().strip()
-    if answer in yes:
+    if answer in YES:
         print_sleep(
             "Great! lets go again.", 2
             )
         play_game()
-    elif answer in no:
+    elif answer in NO:
         print_sleep(
             "Okay no worries! Hope you enjoyed yourself.", 2
             )
@@ -152,12 +152,12 @@ def play_game():
 
     print("Are you ready to join us in The Hunt? (yes/no)")
     answer = input("").lower().strip()
-    while answer not in yes and answer not in no:
+    while answer not in YES and answer not in NO:
         print_sleep(
             "Invalid input Please try again.", 2
             )
         answer = input("").lower().strip()
-    if answer in yes:
+    if answer in YES:
         print_sleep(
             "Brillant!! Lets start", 2
             )
@@ -170,7 +170,7 @@ def play_game():
             "HAHAHAHA \n", 2
             )
         opening()
-    elif answer in no:
+    elif answer in NO:
         print("That's a shame. See you around!")
 
 
@@ -219,12 +219,12 @@ def opening():
 
     answer = input("").lower().strip()
 
-    while answer not in yes and answer not in no:
+    while answer not in YES and answer not in NO:
         print_sleep(
             f"Invalid input Please try again {name}", 2
             )
         answer = input("").lower().strip()
-    if answer in yes:
+    if answer in YES:
         print_sleep(
             "The door slowly creeps open revealing an open room,", 2
             )
@@ -234,7 +234,7 @@ def opening():
         print_sleep(
             "a cloak covering the entity from head to toe.", 2
             )
-    elif answer in no:
+    elif answer in NO:
         print_sleep(
             "You walk around and peer through a window", 2
             )
@@ -253,7 +253,7 @@ def opening():
         print_sleep(
             "Your insanity level has increased \n", 2
             )
-        insanity_stats(+92)
+        insanity_stats(+2)
         check_stats()
 
     print_sleep(
@@ -281,12 +281,12 @@ def opening():
     print("Do you answer back? (yes/no)")
     answer = input("").lower().strip()
 
-    while answer not in yes and answer not in no:
+    while answer not in YES and answer not in NO:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in yes:
+    if answer in YES:
         print_sleep(
             "You nod and say;'Wait how do you know my name?'", 2
             )
@@ -294,7 +294,7 @@ def opening():
             "'Where am I?'", 2
             )
 
-    elif answer in no:
+    elif answer in NO:
         print_sleep(
             "You questioned how he knew your name", 2
             )
@@ -364,16 +364,16 @@ def opening():
 
     print("Do you pick it up? (yes/no)")
     answer = input("").lower().strip()
-    while answer not in yes and answer not in no:
+    while answer not in YES and answer not in NO:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in yes:
+    if answer in YES:
         print_sleep(
             "You place the cloak over your shoulders and leave.", 2
             )
-    elif answer in no:
+    elif answer in NO:
         print_sleep(
             "You stand back up and head to the door.", 2
             )
@@ -384,12 +384,12 @@ def opening():
 
     print("Do you open it? (yes/no)")
     answer = input("").lower().strip()
-    while answer not in yes and answer not in no:
+    while answer not in YES and answer not in NO:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in yes:
+    if answer in YES:
         print_sleep(
             "you see a note inside and a photo. It's of you.", 2
             )
@@ -402,7 +402,7 @@ def opening():
         print_sleep(
             "You put the note in your pocket and walk out the door.", 2
             )
-    elif answer in no:
+    elif answer in NO:
         print_sleep(
             "You decide not to open it and leave the house. \n", 2
             )
@@ -448,13 +448,13 @@ def the_walk():
     print("Do you go straight or right? (straight/right)")
     answer = input("").lower().strip()
 
-    while answer not in straight and answer not in right:
+    while answer not in STRAIGHT and answer not in RIGHT:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
 
-    if answer in straight:
+    if answer in STRAIGHT:
         print_sleep(
             "You continue and suddenly hear a rustle.", 2
             )
@@ -462,7 +462,7 @@ def the_walk():
             "You turn to see a bush", 2
             )
         walk_scenario_one()
-    elif answer in right:
+    elif answer in RIGHT:
         print_sleep(
             "You turn right and you start walking.", 2
             )
@@ -520,12 +520,12 @@ def walk_scenario_one():
     """
     print("What do you do? (1 Use weapon/ 2 Walk)")
     answer = input("").lower().strip()
-    while answer not in use_weapon and answer not in carry_walking:
+    while answer not in USE_WEAPON and answer not in CARRY_WALKING:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in use_weapon:
+    if answer in USE_WEAPON:
         print_sleep(
             "You poke the bush and the rustling stops", 2
             )
@@ -540,7 +540,7 @@ def walk_scenario_one():
         health_stats(-2)
         insanity_stats(2)
         check_stats()
-    elif answer in carry_walking:
+    elif answer in CARRY_WALKING:
         print_sleep(
             "The rustling stops after a few seconds.", 2
             )
@@ -652,14 +652,14 @@ def the_walk_1_a():
     print("Where do you go? (1 Chanting/ 2 Fire)")
     answer = input("").lower().strip()
 
-    while answer not in chanting and answer not in fire:
+    while answer not in CHANTING and answer not in FIRE:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in chanting:
+    if answer in CHANTING:
         the_chant()
-    elif answer in fire:
+    elif answer in FIRE:
         the_fire()
 
 
@@ -741,12 +741,12 @@ def potion():
     insanity_stats(0)
     print("Which potion do you want? (1 Health/ 2 Insanity)")
     answer = input("").lower().strip()
-    while answer not in potion_health and answer not in potion_insanity:
+    while answer not in POTION_HEALTH and answer not in POTION_INSANITY:
         print_sleep(
             "Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in potion_health:
+    if answer in POTION_HEALTH:
         print_sleep(
             "Good choice. Take this and drink it and your health will", 2
             )
@@ -812,7 +812,7 @@ def potion():
         print_sleep(
             "And just like that, the man had disappeared... again.", 2
             )
-    elif answer in potion_insanity:
+    elif answer in POTION_INSANITY:
         print_sleep(
             "Good Choice! Take this and your insanity level will", 2
             )
@@ -966,13 +966,13 @@ def the_chant():
     print("Do you attack? (yes/no)")
     answer = input("").lower().strip()
 
-    while answer not in yes and answer not in no:
+    while answer not in YES and answer not in NO:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
 
-    if answer in yes:
+    if answer in YES:
         print_sleep(
             "You take out your weapon and point it to one of the members.", 2
             )
@@ -1026,7 +1026,7 @@ def the_chant():
         print_sleep(
             "It feels good to be able to sit down.", 2
             )
-    elif answer in no:
+    elif answer in NO:
         print_sleep(
             "You go to take out your weapon but think better off it.", 2
             )
@@ -1070,12 +1070,12 @@ def walk_scenario_two():
     print("What do you do? (1 Stand/ 2 Run)")
     answer = input("").lower().strip()
 
-    while answer not in stand and answer not in run:
+    while answer not in STAND and answer not in RUN:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in stand:
+    if answer in STAND:
         print_sleep(
             "The ground starts rumbling as you stand frozen.", 2
             )
@@ -1093,7 +1093,7 @@ def walk_scenario_two():
             )
         health_stats(-3)
         check_stats()
-    elif answer in run:
+    elif answer in RUN:
         print_sleep(
             "You bolt in the opposite direction of the sounds,", 2
             )
@@ -1226,16 +1226,16 @@ def compass():
     answer = input("").lower().strip()
 
     while (
-        answer not in north
-        and answer not in south
-        and answer not in east
-        and answer not in west
+        answer not in NORTH
+        and answer not in SOUTH
+        and answer not in EAST
+        and answer not in WEST
     ):
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
         answer = input("").lower().strip()
-    if answer in north:
+    if answer in NORTH:
         print_sleep(
             "You start walking North but after a while", 2
             )
@@ -1246,7 +1246,7 @@ def compass():
             "There is no other choice but to go back. \n", 2
             )
         compass()
-    elif answer in south:
+    elif answer in SOUTH:
         print_sleep(
             "South seems like a wise choice.", 2
             )
@@ -1281,7 +1281,7 @@ def compass():
             "direction. \n", 2
             )
         compass()
-    elif answer in east:
+    elif answer in EAST:
         print_sleep(
             "East was in the same direction as", 2
             )
@@ -1352,7 +1352,7 @@ def compass():
             "The predator is near. \n", 2
             )
         the_predators_son()
-    elif answer in west:
+    elif answer in WEST:
         print_sleep(
             "You go west in hopes of setting up a camp site", 2
             )
@@ -1490,19 +1490,19 @@ def finale_part_b():
     print("What do you do? (1 dodge/ 2 attack)")
     answer = input("").lower()
 
-    while answer not in attack and answer not in dodge:
+    while answer not in ATTACK and answer not in DODGE:
         print_sleep(
             f"Invalid input. Please try again {name}", 2
             )
         answer = input("").lower().strip()
-    if answer in dodge:
+    if answer in DODGE:
         print_sleep(
             "You successfully dodge the attack.", 2
             )
         print_sleep(
             "This only enrages him more. \n", 2
             )
-    elif answer in attack:
+    elif answer in ATTACK:
         print_sleep(
             "You strike your weapon at the beast.", 2
             )
@@ -1532,13 +1532,13 @@ def finale_part_b():
     print("What do you do? (1 dodge/ 2 attack)")
     answer = input("").lower().strip()
 
-    while answer not in attack and answer not in dodge:
+    while answer not in ATTACK and answer not in DODGE:
         print_sleep(
             f"Invalid input. Please try again {name}.", 2
             )
         answer = input("").lower().strip()
 
-    if answer in dodge:
+    if answer in DODGE:
         print_sleep(
             "You try to dodge but the beast anticipated", 2
             )
@@ -1553,7 +1553,7 @@ def finale_part_b():
         print_sleep(
             "", 2
             )
-    elif answer in attack:
+    elif answer in ATTACK:
         print_sleep(
             "You stand with your back against him.", 2
             )
@@ -1592,13 +1592,13 @@ def finale_part_b():
     print("Where do you attack? (1 legs/ 2 back)")
     answer = input("").lower().strip()
 
-    while answer not in legs and answer not in back:
+    while answer not in LEGS and answer not in BACK:
         print_sleep(
             f"Invalid input. Please try again {name}", 2
             )
         answer = input("").lower().strip()
 
-    if answer in legs:
+    if answer in LEGS:
         print_sleep(
             "As you charge towards him, you slide at", 2
             )
@@ -1620,7 +1620,7 @@ def finale_part_b():
         print_sleep(
             "roars. \n", 2
             )
-    elif answer in back:
+    elif answer in BACK:
         print_sleep(
             "You sprint towards the beast,", 2
             )
@@ -1680,13 +1680,13 @@ def finale_part_b():
     print("What do you do? (1 dodge/ 2 attack)")
     answer = input("").lower().strip()
 
-    while answer not in dodge and answer not in attack:
+    while answer not in DODGE and answer not in ATTACK:
         print_sleep(
             f"Invalid input. Please try again {name}.", 2
             )
         answer = input("").lower().strip()
 
-    if answer in dodge:
+    if answer in DODGE:
         print_sleep(
             "You roll out the way but the beast could sense it.", 2
             )
@@ -1701,7 +1701,7 @@ def finale_part_b():
             )
         health_stats(-2)
         check_stats()
-    elif answer in attack:
+    elif answer in ATTACK:
         print_sleep(
             "You try to attack him from below but he", 2
             )
@@ -1951,13 +1951,13 @@ def the_predators_son():
 
     answer = input("").lower().strip()
 
-    while answer not in run and answer not in cower:
+    while answer not in RUN and answer not in COWER:
         print_sleep(
             f"Invalid input name. Please try again {name}", 2
             )
         answer = input("").lower().strip()
 
-    if answer in run:
+    if answer in RUN:
         print_sleep(
             "You tried to outrun the pounce but", 2
             )
@@ -2017,12 +2017,12 @@ def the_predators_son():
         print("What do you do? (1 Wriggle/ 2 Attack)")
         answer = input("").lower().strip()
 
-        while answer not in wriggle and answer not in attack:
+        while answer not in WRIGGLE and answer not in ATTACK:
             print_sleep(
                 f"Invalid input name. Please try again {name}", 2
                 )
             answer = input("").lower().strip()
-        if answer in wriggle:
+        if answer in WRIGGLE:
             print_sleep(
                 "You try to wriggle yourself free but the grip", 2
                 )
@@ -2058,7 +2058,7 @@ def the_predators_son():
             print_sleep(
                 "The predator bolts off, leaving you on the floor.", 2
                 )
-        elif answer in attack:
+        elif answer in ATTACK:
             print_sleep(
                 "With the hand that is free, you reach behind you", 2
                 )
@@ -2084,7 +2084,7 @@ def the_predators_son():
                 "The predator bolts off, leaving you on the floor.", 2
                 )
 
-    elif answer in cower:
+    elif answer in COWER:
         print_sleep(
             "You crouch to your knees with your hands in the air,", 2
             )
