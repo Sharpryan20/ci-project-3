@@ -19,6 +19,24 @@ def health_stats(health_number: int):
     user_stats["health"] = user_stats["health"] + (health_number)
     print_sleep("Your health is: " + str(user_stats["health"]), 2)
 
+def play_again():
+    """
+    This function is called when the players reach the end
+    of the game, health reaches 0 or their insanity level 
+    rises to 5.
+    """
+    print("Would you like to play again? (yes/no)")
+    ANSWER = input("").lower().strip()
+    while ANSWER not in yes and ANSWER not in no:
+        print_sleep("Invalid input. Please try again.", 2)
+        ANSWER = input("").lower().strip()
+    if ANSWER in yes:
+        print_sleep("Great! lets go again.", 2)
+        play_game()
+    elif ANSWER in no:
+        print_sleep("Okay no worries! Hope you enjoyed yourself.", 2)
+    play_game()
+
 
 def insanity_stats(insanity_number: int):
     """
@@ -46,6 +64,7 @@ def no_health():
     |_____|__|__|_|_|_|_____|  |_____|\___/|_____|__|__|\033[0m
             \n
             ''', 1)
+    play_again()
 
 
 def max_insanity():
@@ -65,7 +84,7 @@ def max_insanity():
     |_____|__|__|_|_|_|_____|  |_____|\___/|_____|__|__|\033[0m
             \n
             ''', 1)
-
+    play_again()
 
 def check_stats():
     """
@@ -864,16 +883,7 @@ def finale_c():
     print_sleep("It's Not Over!... \n", 2)
     print_sleep("To Be Continued!", 2)
 
-    print("Would you like to play again? (yes/no)")
-    ANSWER = input("").lower().strip()
-    while ANSWER not in yes and ANSWER not in no:
-        print_sleep("Invalid input. Please try again.", 2)
-        ANSWER = input("").lower().strip()
-    if ANSWER in yes:
-        print_sleep("Great! lets go again.", 2)
-        play_game()
-    elif ANSWER in no:
-        print_sleep("Okay no worries! Hope you enjoyed yourself.", 2)
+    play_again()
 
 
 def hypnotised():
