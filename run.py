@@ -77,7 +77,7 @@ def no_health():
         "The Hunt is Over", 2
         )
     print_sleep(
-        '''\x1b[1;31m
+        '''\x1b[96m
      _____ _____ _____ _____    _____ _____ _____ _____
     |   __|  _  |     |   __|  |     |  |  |   __| __  |
     |  |  |     | | | |   __|  |  |  |  |  |   __|    -|
@@ -106,7 +106,7 @@ def max_insanity():
         "Never to be seen again", 2
         )
     print_sleep(
-        '''\x1b[1;31m
+        '''\x1b[96m
      _____ _____ _____ _____    _____ _____ _____ _____
     |   __|  _  |     |   __|  |     |  |  |   __| __  |
     |  |  |     | | | |   __|  |  |  |  |  |   __|    -|
@@ -253,7 +253,7 @@ def opening():
         print_sleep(
             "Your insanity level has increased \n", 2
             )
-        insanity_stats(+2)
+        insanity_stats(+92)
         check_stats()
 
     print_sleep(
