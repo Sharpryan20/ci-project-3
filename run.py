@@ -39,6 +39,13 @@ def no_health():
     print_sleep("You are too tired to continue.", 2)
     print_sleep("You can rest now.", 2)
     print_sleep("The Hunt is Over", 2)
+    print_sleep('''\x1b[1;31m
+     _____ _____ _____ _____    _____ _____ _____ _____
+    |   __|  _  |     |   __|  |     |  |  |   __| __  |
+    |  |  |     | | | |   __|  |  |  |  |  |   __|    -|
+    |_____|__|__|_|_|_|_____|  |_____|\___/|_____|__|__|\033[0m
+            \n
+            ''', 1)
 
 
 def max_insanity():
@@ -51,6 +58,13 @@ def max_insanity():
     print_sleep("There is no going back now.", 2)
     print_sleep("You lose all control over your body and you run off...", 2)
     print_sleep("Never to be seen again", 2)
+    print_sleep('''\x1b[1;31m
+     _____ _____ _____ _____    _____ _____ _____ _____
+    |   __|  _  |     |   __|  |     |  |  |   __| __  |
+    |  |  |     | | | |   __|  |  |  |  |  |   __|    -|
+    |_____|__|__|_|_|_|_____|  |_____|\___/|_____|__|__|\033[0m
+            \n
+            ''', 1)
 
 
 def check_stats():
