@@ -1,6 +1,6 @@
 import time
 
-from .constants import *
+from constants import *
 
 def print_sleep(text: str, delay: int):
     """
