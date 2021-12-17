@@ -1,11 +1,15 @@
+# Import modules
+
 import time
+
 
 from constants import *
 
+
 answer = ""
 
-def print_sleep(
-    text: str, delay: int):
+
+def print_sleep(text: str, delay: int):
     """
     Prints out a line of text for the story and delays
     the next line for a certain amount of time.
@@ -23,10 +27,11 @@ def health_stats(health_number: int):
     print_sleep(
         "Your health is: " + str(user_stats["health"]), 2)
 
+
 def play_again():
     """
     This function is called when the players reach the end
-    of the game, health reaches 0 or their insanity level 
+    of the game, health reaches 0 or their insanity level
     rises to 5.
     """
     print("Would you like to play again? (yes/no)")
@@ -35,6 +40,7 @@ def play_again():
         print_sleep(
             "Invalid input. Please try again.", 2
             )
+    # ErrorMessage inspired by CodeInstitute Love Sandwhiches.
         answer = input("").lower().strip()
     if answer in YES:
         print_sleep(
@@ -44,6 +50,7 @@ def play_again():
     elif answer in NO:
         print_sleep(
             "Okay no worries! Hope you enjoyed yourself.", 2
+            # will end game here.
             )
     play_game()
 
@@ -77,6 +84,7 @@ def no_health():
         "The Hunt is Over", 2
         )
     print_sleep(
+        # End title screen.
         '''\x1b[96m
      _____ _____ _____ _____    _____ _____ _____ _____
     |   __|  _  |     |   __|  |     |  |  |   __| __  |
@@ -85,6 +93,7 @@ def no_health():
             \n
             ''', 1)
     play_again()
+    # main game function
 
 
 def max_insanity():
@@ -114,6 +123,7 @@ def max_insanity():
             \n
             ''', 1)
     play_again()
+
 
 def check_stats():
     """
@@ -163,6 +173,7 @@ def play_game():
             )
         global name
         name = input("What is your name? \n")
+        # player can input name.
         print_sleep(
             f"Hello {name}... GOODLUCK!!!", 2
             )
@@ -170,8 +181,10 @@ def play_game():
             "HAHAHAHA \n", 2
             )
         opening()
+        # next stage of the game.
     elif answer in NO:
         print("That's a shame. See you around!")
+        # game will end here.
 
 
 def opening():
@@ -218,11 +231,13 @@ def opening():
     print("Do you open the door? (yes/no?)")
 
     answer = input("").lower().strip()
+    # allows players to answer.
 
     while answer not in YES and answer not in NO:
         print_sleep(
             f"Invalid input Please try again {name}", 2
             )
+        # Occurs when input by play is invalid.
         answer = input("").lower().strip()
     if answer in YES:
         print_sleep(
@@ -254,7 +269,11 @@ def opening():
             "Your insanity level has increased \n", 2
             )
         insanity_stats(+2)
-        check_stats()
+        # this will increment the players
+        # insanity level by 2.
+        check_stats() 
+        # this checks the players stats and 
+        # calls appropriate functions if needed.
 
     print_sleep(
         "The man lifts his hood and points to a chair.", 2
@@ -282,6 +301,7 @@ def opening():
     answer = input("").lower().strip()
 
     while answer not in YES and answer not in NO:
+        # only allows players to answer yes or no.
         print_sleep(
             f"Invalid input Please try again {name}.", 2
             )
@@ -346,6 +366,8 @@ def opening():
         )
     global item
     item = input("What do you name the sword? \n")
+    # will allow users to type whatever 
+    # and that will be their name for the game.
     print_sleep(
         f"I see you named it {item}. Good choice", 2
         )
@@ -364,6 +386,7 @@ def opening():
 
     print("Do you pick it up? (yes/no)")
     answer = input("").lower().strip()
+    # removes spacing from users answers.
     while answer not in YES and answer not in NO:
         print_sleep(
             f"Invalid input Please try again {name}.", 2
@@ -415,6 +438,7 @@ def opening():
         )
 
     the_walk()
+    # the walk function
 
 
 def the_walk():
