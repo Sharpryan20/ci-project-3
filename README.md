@@ -60,5 +60,17 @@ The home page is the only page on the application. The terminal design was creat
 
 Throughout the planning, design, testing and deployment of the website, I have used a number of technologies.
 
-- Python:
+- [Python](https://www.python.org/):
     - Python is the core programming language used to write all of the code in this application to make it fully functional.
+- [GitHub](https://github.com/dashboard):
+    - Used to store code for the project after being pushed.
+- [Git](https://git-scm.com/):
+    - Used for version control by utilizing the GitPod terminal to commit to Git and push to GitHub.
+- [GitPod](https://gitpod.io/workspaces):
+    - Used as the development environment.
+- [Heroku](https://heroku.com/):
+    -Used to deploy my application.
+- [Lucid Chart](https://lucid.app/users/login#/login):
+    - Used to create ny flow chart of the story.
+- [Pep8](http://pep8online.com/):
+    - Used to check my code against Pep8 requirements.
