@@ -746,6 +746,11 @@ def the_fire():
 
 
 def potion():
+    """
+    This function is called after the player has
+    reached the fire and completed everything
+    there.
+    """
     print_sleep(
         "It's the man! the man from the beginning.", 2
         )
