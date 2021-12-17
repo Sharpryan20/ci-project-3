@@ -57,3 +57,8 @@ As a new and returning user I want to...
 The home page is the only page on the application. The terminal design was created and given to me by Code Institue. 
 
 # Technology Used in design
+
+Throughout the planning, design, testing and deployment of the website, I have used a number of technologies.
+
+- Python:
+    - Python is the core programming language used to write all of the code in this application to make it fully functional.
