@@ -4,11 +4,11 @@
 
 [GitHub Repository](https://github.com/Sharpryan20/ci-project-3)
 
-This is my submission for Code Institute's Portfolio Project Three. It is a text adventure Python based game where the user will wake up inside a forest and will have to survive the night. (Each encounter will affect the users health and insanity levels so they need to play carefully.) For the user to 'win' the game they must not reach below 0 Health or above level 5 Insanity. 
+This is my submission for Code Institute's Portfolio Project Three. It is a text adventure Python-based game where the user will wake up inside a forest and will have to survive the night. (Each encounter will affect the user's health and insanity levels so they need to play carefully.) For the user to 'win' the game they must not reach below 0 Health or above level 5 Insanity. 
 
-The game is deployed on heroku and is strictly terminal based for user interaction.
+The game is deployed on Heroku and is strictly terminal-based for user interaction.
 
-My idea for my project started when I was playing a game on my phone. I then came up with the idea of trying to captivate and auidence with a thrilling and tense game where they have to use their imagination to build the story. I have tried to create multiple paths with some intergrating into each other to encourage replay ability. 
+My idea for my project started when I was playing a game on my phone. I then came up with the idea of trying to captivate an audience with a thrilling and tense game where they have to use their imagination to build the story. I have tried to create multiple paths with some integrating into each other to encourage replayability. 
 
 # UX
 
@@ -16,19 +16,19 @@ My idea for my project started when I was playing a game on my phone. I then cam
 
 ### Vision
 
-The Hunt is an interactive game focusing on users interactions with the forest and how their choices will determine the path they choose. These scenarios may potentially result in the users Health/Insanity to increase or decrease. 
+The Hunt is an interactive game focusing on users' interactions with the forest and how their choices will determine the path they choose. These scenarios may potentially result in the user's Health/Insanity increasing or decreasing. 
 
-The theme of the game would be thriller as I have tried to create tension like quick time events to put the player on the spot and make them act impusively.
+The theme of the game would be a thriller as I have tried to create tension like quick-time events to put the player on the spot and make them act impulsively.
 
-Before I actaully wrote any code I created the opening to the story on a notepad, with the ideas connecting as I started the creation of the story. The rest of the story the users interactive with was developed further and created as and when I was coding. I would be brainstorming ideas and try to interpret them into the story. 
+Before I wrote any code I created the opening to the story on a notepad, with the ideas connecting as I started the creation of the story. The rest of the story the users interact with was developed further and created as and when I was coding. I would be brainstorming ideas and trying to interpret them into the story. 
 
-Once I had a basic understanding of what my story was going to be about I started on creating my first path. I decided that creating one story path at a time and fully completing that would make it less complicated then say developing 4 paths at once. Once I had finished with the main paths I went about looking at how to intergrate the paths together. This will not only increase the length of time the users will spend on one run through but encourage them to replay the game and see what other routes will lead them into. However, this got very complex when trying to remember what paths lead/intergrate where so to help me I created a flow chart on [Lucid Chart](https://lucid.app/documents#/dashboard).
+Once I had a basic understanding of what my story was going to be about I started on creating my first path. I decided that creating one story path at a time and fully completing that would make it less complicated than say developing 4 paths at once. Once I had finished with the main paths I went about looking at how to integrate the paths. This will not only increase the length of time the users will spend on one run-through but encourage them to replay the game and see what other routes will lead them into. However, this got very complex when trying to remember what paths lead/integrate were so to help me I created a flow chart on [Lucid Chart](https://lucid.app/documents#/dashboard).
 
 ![Flow Chart](assets/flow-chart.png)
 
 ### Aims 
 
-- For vistors who visit the website to have a positive user experience, desite them not being greeted with much HTML and CSS styling.
+- For visitors who visit the website to have a positive user experience, despite them not being greeted with much HTML and CSS styling.
 
 - For the game to be enjoyable and allow the users to win.
 
@@ -36,19 +36,19 @@ Once I had a basic understanding of what my story was going to be about I starte
 
 ### Target Auidence
 
-- My target audience are those that are interested in thriller and horror movies. This is achieved through the use of dark settings and eerie weather to draw in the attention. 
+- My target audience is those that are interested in thriller and horror movies. This is achieved through the use of dark settings and eerie weather to draw in attention. 
 
-- Also my target audience would be those into action. This allows them to not only watch the action like in a movie but actually engage with the story and making it their own. 
+- Also my target audience would be those into action. This allows them to not only watch the action like in a movie but engage with the story and make it their own. 
 
 ### User Stories 
 
-As a new and returning user I want to...
+As a new and returning user, I want to...
 
     - Know the theme of the game as soon as I navigate to the landing page.
     - I want to be able to interact with the game. 
     - I want it to feel more personal with choices only I can make.
     - I want to be able to distinguish between the choices I must make in the game.
-    - Have an interesting and in-depth story line.
+    - Have an interesting and in-depth storyline.
 
 # Features
  
@@ -58,7 +58,7 @@ The home page is the only page on the application. The terminal design was creat
 
 # Technology Used in design
 
-Throughout the planning, design, testing and deployment of the website, I have used a number of technologies.
+Throughout the planning, design, testing, and deployment of the website, I have used several technologies.
 
 - [Python](https://www.python.org/):
     - Python is the core programming language used to write all of the code in this application to make it fully functional.
@@ -71,7 +71,7 @@ Throughout the planning, design, testing and deployment of the website, I have u
 - [Heroku](https://heroku.com/):
     -Used to deploy my application.
 - [Lucid Chart](https://lucid.app/users/login#/login):
-    - Used to create ny flow chart of the story.
+    - Used to create my flow chart of the story.
 - [Pep8](http://pep8online.com/):
     - Used to check my code against Pep8 requirements.
 
@@ -79,7 +79,7 @@ Throughout the planning, design, testing and deployment of the website, I have u
 
 ## Functionality 
 
-Once I had completed the story and was certain I was making no changes to it, I got a bunch of people I know to test it. I asked them each to specifically go down certain paths so I could make sure all the paths worked and intergrated how they should. I also needed to know if the game was actually beatable and loseable. People of all ages ranging 17 - 55 was easily able to navigate through the game with ease.
+Once I had completed the story and was certain I was making no changes to it, I got a bunch of people I know to test it. I asked them each to specifically go down certain paths so I could make sure all the paths worked and integrated how they should. I also needed to know if the game was able to beat. People of all ages ranging from 17 - 55 were easily able to navigate through the game with ease.
 
 ## User Testing Stories
 
@@ -101,11 +101,11 @@ I ran my Python code through Pep8 online and there were no 'errors' in my code.
 
 # Peer Review
 
-As a student of Code Institute we have slack as a resource to help and compliment our learning. I would like to thank students Aleksei Konovalov and David Horrocks for their incredible support and guide throughout the project. They both took time out of their way to help me through my problems that I faced in the project.
+As a student of Code Institute, we have slack as a resource to help and complement our learning. I would like to thank students Aleksei Konovalov and David Horrocks for their incredible support and guide throughout the project. They both took time out of their way to help me through the problems that I faced in the project.
 
 # Performance Testing 
 
-Below is the report generated from lighthouse via Chrome Devtools for the desktop website.
+Below is the report generated from the lighthouse via Chrome Devtools for the desktop website.
 
 ![reports](assets/lighthouse.png)
 
@@ -118,15 +118,15 @@ All bugs that were found during the development of the project were fixed in the
 ## Gitpod and GitHub
 
 To use the terminal designed by The Code Institute I used the [Code Institute Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template).
-This allows the code that is used to run the terminal be viewed in the browser.
+This allows the code that is used to run the terminal to be viewed in the browser.
 
 ## Steps:
 
-* Click create new repository.
+* Click create a new repository.
 * Give the repository a name.
 * Under Repository template pick the [Code Institute Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template).
 * Click create repository
-- Use GIT ADD .
+- Use GIT ADD.
 - GIT COMMIT -m "Comments"
 - GIT PUSH
 - To commit the code and push to Github
@@ -159,7 +159,7 @@ I used the video tutorial provided by The Code Institute to create a Heroku acco
 - Add build pack include Python and Node.js
 - The order of the buildpacks is important, in the list Python should be first with Node.js second. If they are not in this order, you can click and drag them to rearrange.
 - Click Deploy at the top to go to the Deployment settings
-- Choose GiHub as the deployment method
+- Choose GitHub as the deployment method
 - Search for your app and connect
 - Use Automatic deploys if you would like a new build when changes are pushed to GitHub from Gitpod
 - Use Manual deploy for a new build every time this button is clicked.
