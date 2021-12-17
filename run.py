@@ -271,8 +271,8 @@ def opening():
         insanity_stats(+2)
         # this will increment the players
         # insanity level by 2.
-        check_stats() 
-        # this checks the players stats and 
+        check_stats()
+        # this checks the players stats and
         # calls appropriate functions if needed.
 
     print_sleep(
@@ -366,7 +366,7 @@ def opening():
         )
     global item
     item = input("What do you name the sword? \n")
-    # will allow users to type whatever 
+    # will allow users to type whatever
     # and that will be their name for the game.
     print_sleep(
         f"I see you named it {item}. Good choice", 2
