@@ -144,7 +144,7 @@ def play_game():
     The only function called on a global scale.
     """
     print(
-        """\033[94m
+        """\033[96m
     _______ ___   ___ ______
    |__   __|   | |   |    __|
       | |  |   |_|   |   |__

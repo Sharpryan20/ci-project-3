@@ -74,3 +74,25 @@ Throughout the planning, design, testing and deployment of the website, I have u
     - Used to create ny flow chart of the story.
 - [Pep8](http://pep8online.com/):
     - Used to check my code against Pep8 requirements.
+
+# Testing
+
+## Functionality 
+
+Once I had completed the story and was certain I was making no changes to it, I got a bunch of people I know to test it. I asked them each to specifically go down certain paths so I could make sure all the paths worked and intergrated how they should. I also needed to know if the game was actually beatable and loseable. People of all ages ranging 17 - 55 was easily able to navigate through the game with ease.
+
+## User Testing Stories
+
+I needed to ensure that all user stories identified in the strategy plane were achieved.
+
+'Know the theme of the game as soon as I navigate to the landing page.'
+![Title](assets/readme-images/title.png)
+
+
+'I want it to feel more personal with choices only I can make.'
+![Name choice](assets/readme-images/name-deciding.png)
+
+'I want to be able to distinguish between the choices I must make in the game.'
+![Player Choice](assets/readme-images/player-choice.png)
+
+
