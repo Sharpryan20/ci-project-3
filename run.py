@@ -3,7 +3,31 @@
 import time
 
 
-from constants import *
+from constants import (
+    YES,
+    NO,
+    STRAIGHT,
+    STAND,
+    RIGHT,
+    WRIGGLE,
+    RUN,
+    COWER,
+    NORTH,
+    SOUTH,
+    EAST,
+    WEST,
+    BACK,
+    LEGS,
+    POTION_HEALTH,
+    POTION_INSANITY,
+    USE_WEAPON,
+    CHANTING,
+    FIRE,
+    CARRY_WALKING,
+    DODGE,
+    ATTACK,
+    user_stats
+)
 
 
 answer = ""
@@ -898,7 +922,7 @@ def potion():
             )
 
     hypnotised()
-    finale_a()
+    finale_part_a()
 
 
 def the_chant():
@@ -1499,7 +1523,7 @@ def finale_part_a():
     print_sleep(
         "more confident by the second...", 2
         )
-    finale_b()
+    finale_part_b()
 
 
 def finale_part_b():
@@ -1737,7 +1761,7 @@ def finale_part_b():
             )
         health_stats(-3)
         check_stats()
-    finale_c()
+    finale_part_c()
 
 
 def finale_part_c():
@@ -2202,7 +2226,7 @@ def the_predators_son():
         "There is no escape from this... at all.", 2
         )
 
-    finale_a()
+    finale_part_a()
 
 
 play_game()
