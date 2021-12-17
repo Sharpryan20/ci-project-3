@@ -25,3 +25,35 @@ Before I actaully wrote any code I created the opening to the story on a notepad
 Once I had a basic understanding of what my story was going to be about I started on creating my first path. I decided that creating one story path at a time and fully completing that would make it less complicated then say developing 4 paths at once. Once I had finished with the main paths I went about looking at how to intergrate the paths together. This will not only increase the length of time the users will spend on one run through but encourage them to replay the game and see what other routes will lead them into. However, this got very complex when trying to remember what paths lead/intergrate where so to help me I created a flow chart on [Lucid Chart](https://lucid.app/documents#/dashboard).
 
 ![Flow Chart](assets/readme-images/flow-chart.png)
+
+### Aims 
+
+- For vistors who visit the website to have a positive user experience, desite them not being greeted with much HTML and CSS styling.
+
+- For the game to be enjoyable and allow the users to win.
+
+- Allow the game to be a bit more personal to each individual by allowing them to state their name and even going as far as allowing them to name the sword that they are given at the start of the game.
+
+### Target Auidence
+
+- My target audience are those that are interested in thriller and horror movies. This is achieved through the use of dark settings and eerie weather to draw in the attention. 
+
+- Also my target audience would be those into action. This allows them to not only watch the action like in a movie but actually engage with the story and making it their own. 
+
+### User Stories 
+
+As a new and returning user I want to...
+
+    - Know the theme of the game as soon as I navigate to the landing page.
+    - I want to be able to interact with the game. 
+    - I want it to feel more personal with choices only I can make.
+    - I want to be able to distinguish between the choices I must make in the game.
+    - Have an interesting and in-depth story line.
+
+# Features
+ 
+## Home Page 
+
+The home page is the only page on the application. The terminal design was created and given to me by Code Institue. 
+
+# Technology Used in design
