@@ -197,15 +197,24 @@ def play_game():
             )
         global name
         name = input("What is your name? \n")
+        while len(name.strip()) ==0:
+            print_sleep(
+                "Invalid input! Please try again.", 2
+            )
+            if len(name.strip()) ==0:
+                name = input("What is your name? \n")
+
+            
         # player can input name.
-        print_sleep(
-            f"Hello {name}... GOODLUCK!!!", 2
-            )
-        print_sleep(
-            "HAHAHAHA \n", 2
-            )
-        opening()
-        # next stage of the game.
+        else:
+            print_sleep(
+                f"Hello {name}... GOODLUCK!!!", 2
+                )
+            print_sleep(
+                "HAHAHAHA \n", 2
+                )
+            opening()
+            # next stage of the game.
     elif answer in NO:
         print("That's a shame. See you around!")
         # game will end here.
@@ -391,6 +400,11 @@ def opening():
         )
     global item
     item = input("What do you name the sword? \n")
+    while len(item.strip()) ==0:
+        print_sleep("Invalid input! Please try again.", 2
+        )
+        if len(item.strip()) ==0:
+            item = input("What do you name the sword? \n")
     # will allow users to type whatever
     # and that will be their name for the game.
     print_sleep(
