@@ -1,12 +1,12 @@
 # The Hunt 
 
-[Live link](https://the-hunters.herokuapp.com/)
+[Live link](https://ci-project-3-1.onrender.com)
 
 [GitHub Repository](https://github.com/Sharpryan20/ci-project-3)
 
 This is my submission for Code Institute's Portfolio Project Three. It is a text adventure Python-based game where the user will wake up inside a forest and will have to survive the night. (Each encounter will affect the user's health and insanity levels so they need to play carefully.) For the user to 'win' the game they must not reach below 0 Health or above level 5 Insanity. 
 
-The game is deployed on Heroku and is strictly terminal-based for user interaction.
+The game is deployed on Render and is strictly terminal-based for user interaction.
 
 My idea for my project started when I was playing a game on my phone. I then came up with the idea of trying to captivate an audience with a thrilling and tense game where they have to use their imagination to build the story. I have tried to create multiple paths with some integrating into each other to encourage replayability. 
 
@@ -145,25 +145,6 @@ This allows the code that is used to run the terminal to be viewed in the browse
 - Type git clone in the terminal and paste the link in.
 - The clone will be created
 
-
-## Creating an Application with Heroku
-
-I used the video tutorial provided by The Code Institute to create a Heroku account, add the details of the app and deploy the application to a live environment.
-
-- Log in to Heroku [Heroku](https://dashboard.heroku.com/)
-- Click New 
-- Give the app a name and choose the region
-- Click on settings first and set the Reveal Config Vars
-- PORT  = Key 8000 = Value
-- If using CREDS please make sure this has been added to the requirements file.
-- Add build pack include Python and Node.js
-- The order of the buildpacks is important, in the list Python should be first with Node.js second. If they are not in this order, you can click and drag them to rearrange.
-- Click Deploy at the top to go to the Deployment settings
-- Choose GitHub as the deployment method
-- Search for your app and connect
-- Use Automatic deploys if you would like a new build when changes are pushed to GitHub from Gitpod
-- Use Manual deploy for a new build every time this button is clicked.
-- Once completed click View App.
 
 # Credits 
 
